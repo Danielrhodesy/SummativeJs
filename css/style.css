@@ -11,24 +11,25 @@
     width: 79px;
     margin: 5px 0px 0px 9px; }
 
-#main-div {
+#mainpage-div {
+  display: none;
   position: relative;
   width: 50%;
   margin: auto;
   padding-top: 22em; }
-  #main-div .main-box h1 {
+  #mainpage-div .main-box h1 {
     text-align: center;
     font-size: 84px;
     font-weight: bold;
     color: white;
     font-family: 'Questrial', sans-serif; }
-  #main-div .here-button {
+  #mainpage-div .here-button {
     position: absolute;
     padding-left: 20.5em;
     padding-top: 2.5em;
     height: 65px;
     width: 50%; }
-    #main-div .here-button h4 {
+    #mainpage-div .here-button h4 {
       margin: 0px;
       border: white solid 1px;
       text-align: center;
@@ -37,6 +38,27 @@
       color: white;
       width: 300px;
       font-family: 'Questrial', sans-serif; }
+
+#page2-div {
+  position: relative;
+  height: 660px;
+  width: 100%;
+  background-color: #A3D1D8; }
+  #page2-div h1 {
+    text-align: center;
+    font-size: 84px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Questrial', sans-serif; }
+  #page2-div .master-contanier .single-container {
+    display: inline-flex;
+    height: 375px;
+    width: 227px;
+    background-color: #055F63;
+    justify-content: space-around; }
+    #page2-div .master-contanier .single-container img {
+      height: 128px;
+      width: auto; }
 
 .background-img {
   position: absolute; }

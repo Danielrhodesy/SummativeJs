@@ -13,7 +13,13 @@
 
   }
 }
-#main-div {
+
+// ------------
+//  Main page
+// ------------
+
+#mainpage-div {
+  display: none;
   position: relative;
   width: 50%;
   margin: auto;
@@ -45,6 +51,45 @@
     }
   }
 }
+
+
+// ------------
+//   Page  2
+// ------------
+
+#page2-div {
+  position: relative;
+  height: 660px;
+  width: 100%;
+  background-color: #A3D1D8;
+  h1 {
+    text-align: center;
+    font-size: 84px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+  }
+  .master-contanier {
+    .single-container {
+      display: inline-flex;
+      height: 375px;
+      width: 227px;
+      background-color: #055F63;
+      justify-content: space-around;
+      img {
+        height: 128px;
+        width: auto;
+      }
+    }
+  }
+}
+
+
+
+// ------------
+//   Back img
+// ------------
+
 .background-img {
   position: absolute;
   img {

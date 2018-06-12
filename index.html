@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Questrial|Signika|Sunflower:300" rel="stylesheet">
+    <link rel="stylesheet" href="animsition-master/dist/css/animsition.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="animsition-master/dist/js/animsition.min.js"></script>
   </head>
   <body>
     <div class="background-img">
@@ -14,15 +17,62 @@
     <div class="about-icon">
       <img src="images/portrait-512.png" alt="About Icon">
     </div>
-    <div id="main-div">
+    <div id="mainpage-div">
       <div class="main-box">
         <h1>Start Adventure</h1>
       </div>
       <div class="here-button">
-         <h4>Here</h4>
+        <a href="#car-div" class="animsition-link">
+          <h4>Here</h4>
+        </a>
       </div>
-    </div><script href="js/script.js">
-
+    </div>
+    <div id="page2-div">
+      <h1>Which Vehicle</h1>
+      <div class="master-contanier">
+        <div class="single-container motorhome">
+          <img src="images/caravan.png" alt="MotorHome">
+          <p>Party Size: 2-6 pp</p>
+          <br>
+          <p>Length of Hire: 2-15 days</p>
+          <br>
+          <p>Fueluse: $16 perH</p>
+          <br>
+          <button type="button" name="button">$200</button>
+        </div>
+        <div class="single-container largecar">
+          <img src="images/suv.png" alt="Large Car">
+          <p>Party Size: 2-6 pp</p>
+          <br>
+          <p>Length of  Hire: 2-15 days</p>
+          <br>
+          <p>Fueluse: $16 perH</p>
+          <br>
+          <button type="button" name="button">$200</button>
+        </div>
+        <div class="single-container smallcar">
+          <img src="images/automobile.png" alt="Small Car">
+          <p>Party Size: 2-6 pp</p>
+          <br>
+          <p>Length of Hire: 2-15 days</p>
+          <br>
+          <p>Fueluse: $16 perH</p>
+          <br>
+          <button type="button" name="button">$200</button>
+        </div>
+        <div class="single-container bike">
+          <img src="images/motor-sports.png" alt="Motor Bike">
+          <p>Party Size: 2-6 pp</p>
+          <br>
+          <p>Length of Hire: 2-15 days</p>
+          <br>
+          <p>Fueluse: $16 perH</p>
+          <br>
+          <button type="button" name="button">$200</button>
+        </div>
+      </div>
+    </div>
+    <script href="js/script.js">
     </script>
   </body>
 </html>
