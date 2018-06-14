@@ -1,8 +1,12 @@
+// ------------
+// ABOUT ICON
+// ------------
+
 .about-icon {
   position: relative;
   float: right;
   background-color: #A3D1D8;
-  margin: 40px 60px 0px 0px;
+  padding: 40px 60px 0px 0px;
   height: 97px;
   width: 97px;
   border-radius: 50%;
@@ -11,11 +15,6 @@
     width: 79px;
     margin: 5px 0px 0px 9px;
   }
-}
-.about-icon::after{
-  content: '';
-  display: table;
-  clear: both;
 }
 
 // ------------
@@ -56,12 +55,12 @@
   }
 }
 
-
 // ------------
-//   PAGE 2
+//   PAGE 2 (VEHICLE)
 // ------------
 
 #page2-div {
+  display: none;
   position: relative;
   top: 50%;
   transform: translateY(25%);
@@ -117,10 +116,119 @@
   }
 }
 
+// ------------
+//  PAGE 3 (TRIP DETAILS)
+// ------------
+
+#page3-div {
+  display: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(25%);
+  height: 660px;
+  width: 100%;
+  background-color: #A3D1D8;
+  padding-top: 20px;
+  box-shadow: 0px 6px 40px black;
+  h1 {
+    text-align: center;
+    text-align: center;
+    font-size: 84px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+  }
+  .master-container--ph {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 4em;
+    width:60%;
+    margin-left: 17.5%;
+    .phsingle-container {
+      height: 320px;
+      width: 389px;
+      background-color: #055F63;
+      border-radius: 5px;
+      box-shadow: 3px 3.5px 5px;
+      h2 {
+        font-size: 80;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 1em;
+      }
+      .number-container {
+        height: 111px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: #A3D1D8;
+        border-radius: 75px;
+        margin-top: 4em;
+        .number-minus {
+          height: 111px;
+          width: 97px;
+          border-radius: 75px 0px 0px 75px;
+          float: left;
+          background-color: #DDC137;
+        }
+        .number-plus {
+          height: 111px;
+          width: 97px;
+          border-radius: 0px 75px 75px 0px;
+          float: right;
+          background-color: #DDC137;
+        }
+      }
+    }
+  }
+}
+
+// ------------
+// PAGE 3 (MAP)
+// ------------
+
+#page4-div {
+  position: relative;
+  top: 50%;
+  transform: translateY(25%);
+  height: 785px;
+  width: 100%;
+  background-color: #A3D1D8;
+  .sidebar {
+    height: 785px;
+    width: 450px;
+    border-top: 13px solid;
+    border-right: 13px solid;
+    border-color: #055F63;
+    h2 {
+      font-size: 80;
+      color: white;
+      padding-left: 40px;
+      font-weight: bold;
+      padding-top: 1em;
+    }
+    .sidebar-button {
+      text-align: center;
+      
+      button {
+      }
+    }
+  }
+  .mapapi {
+    float: right;
+    width: 700px;
+    height: 828px;
+  }
+}
+
+
+
+
 
 
 // ------------
-//   Back img
+//   BACK IMG
 // ------------
 
 .background-img {
