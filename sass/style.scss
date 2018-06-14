@@ -209,8 +209,10 @@
       padding-top: 1em;
     }
     .sidebar-button {
+      position: absolute;
+      bottom: 15%;
+      width: 22%;
       text-align: center;
-      
       button {
       }
     }

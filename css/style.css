@@ -163,6 +163,9 @@
       font-weight: bold;
       padding-top: 1em; }
     #page4-div .sidebar .sidebar-button {
+      position: absolute;
+      bottom: 15%;
+      width: 22%;
       text-align: center; }
   #page4-div .mapapi {
     float: right;
