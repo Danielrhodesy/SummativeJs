@@ -25,6 +25,7 @@
 // ------------
 
 #mainpage-div {
+  display: none;
   position: relative;
   width: 50%;
   margin: auto;
@@ -70,13 +71,13 @@
 // ------------
 
 #page2-div {
-  display: none;
+  // display: none;
   position: relative;
   top: 50%;
   transform: translateY(25%);
   height: 660px;
   width: 100%;
-  background-color: #A3D1D8;
+  background-color: rgba( 163, 209, 216, 0.92);
   padding-top: 20px;
   box-shadow: 0px 6px 40px black;
   h1 {
@@ -137,9 +138,11 @@
   transform: translateY(25%);
   height: 660px;
   width: 100%;
-  background-color: #A3D1D8;
+  // background-color: #A3D1D8;
   padding-top: 20px;
   box-shadow: 0px 6px 40px black;
+  background-color: rgba( 163, 209, 216, 0.92);
+
   h1 {
     text-align: center;
     text-align: center;
@@ -205,7 +208,7 @@
   transform: translateY(9%);
   height: 785px;
   width: 100%;
-  background-color: #A3D1D8;
+  background-color: rgba( 163, 209, 216, 0.92);
   .sidebar {
     height: 785px;
     width: 450px;
