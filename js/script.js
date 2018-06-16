@@ -2,4 +2,6 @@
 //   $(this).hide("slide", { direction: "left"}, 1000)
 // });
 
-// $("#animsition").animsition();
+// $('h1').hide();
+
+$('#animsition-mainpage').animsition();
