@@ -14,7 +14,6 @@
       margin-top: 10px; }
 
 #mainpage-div {
-  display: none;
   position: relative;
   width: 50%;
   margin: auto;
@@ -48,6 +47,7 @@
       color: rgba(0, 0, 0, 0.2); }
 
 #page2-div {
+  display: none;
   position: relative;
   top: 50%;
   transform: translateY(25%);
@@ -105,7 +105,6 @@
   box-shadow: 0px 6px 40px black;
   background-color: rgba(163, 209, 216, 0.92); }
   #page3-div h1 {
-    text-align: center;
     text-align: center;
     font-size: 84px;
     font-weight: bold;
@@ -191,6 +190,57 @@
     width: 80%;
     height: 784px;
     border-top: 13px solid #055F63; }
+
+#page5-div {
+  display: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(25%);
+  height: 660px;
+  width: 100%;
+  padding-top: 20px;
+  box-shadow: 0px 6px 40px black;
+  background-color: rgba(163, 209, 216, 0.92); }
+  #page5-div h1 {
+    text-align: center;
+    font-size: 84px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Questrial', sans-serif; }
+  #page5-div .main-container--c {
+    height: 470px;
+    width: 100%;
+    background-color: #055F63; }
+    #page5-div .main-container--c h2 {
+      color: white;
+      padding: 1em 0 0 2em; }
+    #page5-div .main-container--c .main-container--c--wrapper {
+      display: flex;
+      justify-content: space-around;
+      padding: 2em 5% 0 5%;
+      width: 100%; }
+      #page5-div .main-container--c .main-container--c--wrapper .yt-container {
+        height: 220px;
+        width: 12.5%; }
+        #page5-div .main-container--c .main-container--c--wrapper .yt-container h4 {
+          padding: 0.6em 0 0 0.5em;
+          color: white; }
+        #page5-div .main-container--c .main-container--c--wrapper .yt-container h3 {
+          color: white; }
+    #page5-div .main-container--c .button-wrapper {
+      text-align: center;
+      padding-top: 3em; }
+      #page5-div .main-container--c .button-wrapper button {
+        border-radius: 3px;
+        height: 60px;
+        width: 240px;
+        color: grey;
+        background-color: #DDC137;
+        text-align: center; }
+        #page5-div .main-container--c .button-wrapper button p {
+          color: black;
+          font-size: 30px;
+          padding-top: 3px; }
 
 .background-img {
   position: absolute; }
