@@ -56,6 +56,16 @@
   background-color: rgba(163, 209, 216, 0.92);
   padding-top: 20px;
   box-shadow: 0px 6px 40px black; }
+  #page2-div .backbutton {
+    height: 0px;
+    padding-left: 2%; }
+    #page2-div .backbutton .v-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px; }
+      #page2-div .backbutton .v-backbutton-wrapper img {
+        height: 60px;
+        width: auto; }
   #page2-div h1 {
     text-align: center;
     font-size: 84px;
@@ -91,7 +101,7 @@
           border-radius: 3px;
           height: 40px;
           width: 60px;
-          color: grey;
+          color: black;
           background-color: #DDC137; }
 
 #page3-div {
@@ -104,6 +114,30 @@
   padding-top: 20px;
   box-shadow: 0px 6px 40px black;
   background-color: rgba(163, 209, 216, 0.92); }
+  #page3-div .backbutton {
+    height: 0px;
+    padding-left: 2%; }
+    #page3-div .backbutton .ph-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px; }
+      #page3-div .backbutton .ph-backbutton-wrapper img {
+        height: 60px;
+        width: auto; }
+  #page3-div .ph-confirmbutton {
+    text-align: center;
+    padding-top: 4.5em; }
+    #page3-div .ph-confirmbutton button {
+      border-radius: 3px;
+      height: 60px;
+      width: 240px;
+      color: grey;
+      background-color: #DDC137;
+      text-align: center; }
+      #page3-div .ph-confirmbutton button p {
+        color: black;
+        font-size: 30px;
+        padding-top: 3px; }
   #page3-div h1 {
     text-align: center;
     font-size: 84px;
@@ -114,9 +148,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 4em;
+    padding-top: 3em;
     width: 60%;
-    margin-left: 17.5%; }
+    margin-left: 20%; }
     #page3-div .master-container--ph .phsingle-container {
       height: 320px;
       width: 389px;
@@ -157,6 +191,16 @@
   height: 785px;
   width: 100%;
   background-color: rgba(163, 209, 216, 0.92); }
+  #page4-div .backbutton {
+    height: 0px;
+    padding-left: 2%; }
+    #page4-div .backbutton .m-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px; }
+      #page4-div .backbutton .m-backbutton-wrapper img {
+        height: 60px;
+        width: auto; }
   #page4-div .sidebar {
     height: 785px;
     width: 450px;
@@ -201,6 +245,16 @@
   padding-top: 20px;
   box-shadow: 0px 6px 40px black;
   background-color: rgba(163, 209, 216, 0.92); }
+  #page5-div .backbutton {
+    height: 0px;
+    padding-left: 2%; }
+    #page5-div .backbutton .c-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px; }
+      #page5-div .backbutton .c-backbutton-wrapper img {
+        height: 60px;
+        width: auto; }
   #page5-div h1 {
     text-align: center;
     font-size: 84px;

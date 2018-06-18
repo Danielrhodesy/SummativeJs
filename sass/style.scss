@@ -80,6 +80,19 @@
   background-color: rgba( 163, 209, 216, 0.92);
   padding-top: 20px;
   box-shadow: 0px 6px 40px black;
+  .backbutton {
+    height: 0px;
+    padding-left: 2%;
+    .v-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px;
+      img {
+        height: 60px;
+        width: auto;
+      }
+    }
+  }
   h1 {
     text-align: center;
     font-size: 84px;
@@ -119,7 +132,7 @@
           border-radius: 3px;
           height: 40px;
           width: 60px;
-          color: grey;
+          color: black;
           background-color: #DDC137;
         }
       }
@@ -142,7 +155,36 @@
   padding-top: 20px;
   box-shadow: 0px 6px 40px black;
   background-color: rgba( 163, 209, 216, 0.92);
-
+  .backbutton {
+    height: 0px;
+    padding-left: 2%;
+    .ph-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px;
+      img {
+        height: 60px;
+        width: auto;
+      }
+    }
+  }
+  .ph-confirmbutton {
+    text-align: center;
+    padding-top: 4.5em;
+    button {
+      border-radius: 3px;
+      height: 60px;
+      width: 240px;
+      color: grey;
+      background-color: #DDC137;
+      text-align: center;
+      p {
+        color: black;
+        font-size: 30px;
+        padding-top: 3px;
+      }
+    }
+  }
   h1 {
     text-align: center;
     font-size: 84px;
@@ -154,9 +196,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 4em;
+    padding-top: 3em;
     width:60%;
-    margin-left: 17.5%;
+    margin-left: 20%;
     .phsingle-container {
       height: 320px;
       width: 389px;
@@ -208,6 +250,19 @@
   height: 785px;
   width: 100%;
   background-color: rgba( 163, 209, 216, 0.92);
+  .backbutton {
+    height: 0px;
+    padding-left: 2%;
+    .m-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px;
+      img {
+        height: 60px;
+        width: auto;
+      }
+    }
+  }
   .sidebar {
     height: 785px;
     width: 450px;
@@ -263,6 +318,19 @@
   padding-top: 20px;
   box-shadow: 0px 6px 40px black;
   background-color: rgba( 163, 209, 216, 0.92);
+  .backbutton {
+    height: 0px;
+    padding-left: 2%;
+    .c-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px;
+      img {
+        height: 60px;
+        width: auto;
+      }
+    }
+  }
   h1 {
     text-align: center;
     font-size: 84px;
