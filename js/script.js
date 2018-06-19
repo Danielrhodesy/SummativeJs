@@ -42,7 +42,6 @@ $('#animsition-mainpage').animsition();
     });
   });
 
-
 //Back button
 
   // Back from page 2 to main
@@ -80,6 +79,21 @@ $('#animsition-mainpage').animsition();
       });
     });
   });
+
+  //PLUS MINUS FUNCTION
+
+  // var count = 1;
+  //   var countEl = document.getElementById("count");
+  //   function plus(){
+  //       count++;
+  //       countEl.value = count;
+  //   }
+  //   function minus(){
+  //     if (count > 1) {
+  //       count--;
+  //       countEl.value = count;
+  //     }
+  //   }
 
 
 });

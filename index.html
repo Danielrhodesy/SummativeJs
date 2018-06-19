@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <!-- <div id="animsition"> -->
 
 <!--ABOUT/BACK/BACKGROUND -->
 
@@ -22,7 +21,6 @@
           <img src="images/question.png" alt="About Icon">
         </div>
       </div>
-
 
   <!-- MAIN PAGE -->
 
@@ -118,28 +116,31 @@
             <h2>Party Size</h2>
             <div class="number-container">
               <div class="number-minus">
-
+                <input type="button" value="-" id="minus" onclick="minus()">
               </div>
               <div class="number-plus">
-
+                <input type="button" value="+" id="plus" onclick="plus()">
               </div>
               <div class="number-input">
-
+                <input type="text" size="10" value="1" id="count">
               </div>
             </div>
           </div>
           <div class="phsingle-container hl-container">
             <h2>Hire Length</h2>
             <div class="number-container">
-              <div class="number-minus">
+              <form method="post" action="">
 
-              </div>
-              <div class="number-plus">
+                <input type="text" name="" id="count" value="1">
 
-              </div>
-              <div class="number-input">
 
-              </div>
+                <!-- <div class="number-minus">
+                </div>
+                <div class="number-plus">
+                </div>
+                <div class="number-input">
+                </div> -->
+              </form>
             </div>
           </div>
         </div>
