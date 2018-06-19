@@ -174,17 +174,29 @@
         border-radius: 75px;
         margin-top: 4em; }
         #page3-div .master-container--ph .phsingle-container .number-container .number-minus {
-          height: 111px;
-          width: 97px;
-          border-radius: 75px 0px 0px 75px;
-          float: left;
-          background-color: #DDC137; }
+          float: left; }
+          #page3-div .master-container--ph .phsingle-container .number-container .number-minus input {
+            height: 111px;
+            width: 97px;
+            border-radius: 75px 0px 0px 75px;
+            background-color: #DDC137;
+            border: 0px; }
         #page3-div .master-container--ph .phsingle-container .number-container .number-plus {
+          float: right; }
+          #page3-div .master-container--ph .phsingle-container .number-container .number-plus input {
+            height: 111px;
+            width: 97px;
+            border-radius: 0px 75px 75px 0px;
+            background-color: #DDC137;
+            border: 0px; }
+        #page3-div .master-container--ph .phsingle-container .number-container .number-input input {
+          width: 117.2px;
           height: 111px;
-          width: 97px;
-          border-radius: 0px 75px 75px 0px;
-          float: right;
-          background-color: #DDC137; }
+          text-align: center;
+          background-color: rgba(163, 209, 216, 0);
+          border: 0px;
+          color: #055F63;
+          font-size: 90px; }
 
 #page4-div {
   display: flex;
@@ -208,7 +220,7 @@
         width: auto; }
   #page4-div .sidebar {
     height: 785px;
-    width: 450px;
+    width: 390px;
     border-top: 13px solid;
     border-right: 13px solid;
     border-color: #055F63; }

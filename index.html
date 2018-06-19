@@ -116,31 +116,28 @@
             <h2>Party Size</h2>
             <div class="number-container">
               <div class="number-minus">
-                <input type="button" value="-" id="minus" onclick="minus()">
+                <input type='button' value='-' class='ps-minus' field='ps-quantity' />
               </div>
               <div class="number-plus">
-                <input type="button" value="+" id="plus" onclick="plus()">
+                <input type='button' value='+' class='ps-plus' field='ps-quantity' />
               </div>
               <div class="number-input">
-                <input type="text" size="10" value="1" id="count">
+                <input type='text' name='ps-quantity' value='0' class='ps-qty' />
               </div>
             </div>
           </div>
           <div class="phsingle-container hl-container">
             <h2>Hire Length</h2>
             <div class="number-container">
-              <form method="post" action="">
-
-                <input type="text" name="" id="count" value="1">
-
-
-                <!-- <div class="number-minus">
-                </div>
-                <div class="number-plus">
-                </div>
-                <div class="number-input">
-                </div> -->
-              </form>
+              <div class="number-minus">
+                <input type='button' value='-' class='hl-minus' field='hl-quantity' />
+              </div>
+              <div class="number-plus">
+                <input type='button' value='+' class='hl-plus' field='hl-quantity' />
+              </div>
+              <div class="number-input">
+                <input type='text' name='hl-quantity' value='0' class='hl-qty' />
+              </div>
             </div>
           </div>
         </div>
