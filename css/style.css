@@ -251,6 +251,14 @@
     width: 80%;
     height: 784px;
     border-top: 13px solid #055F63; }
+    #page4-div .mapapi #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      width: 77.3%;
+      height: 100%;
+      border-top: 13px solid #055F63; }
 
 #page5-div {
   display: none;

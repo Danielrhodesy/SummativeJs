@@ -90,77 +90,119 @@ $('#animsition-mainpage').animsition();
 // PLUS MINUS FUNCTION
 // -------------------
 
-    // PARTY SIZE
+  // PARTY SIZE
 
-    // This button will increment the value
-    $('.ps-plus').click(function(e){
-        // Stop acting like a button
-        e.preventDefault();
-        // Get the field name
-        fieldName = $(this).attr('field');
-        // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
-        // If is not undefined
-        if (!isNaN(currentVal)) {
-            // Increment
-            $('input[name='+fieldName+']').val(currentVal + 1);
-        } else {
-            // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(0);
-        }
-    });
-    // This button will decrement the value till 0
-    $(".ps-minus").click(function(e) {
-        // Stop acting like a button
-        e.preventDefault();
-        // Get the field name
-        fieldName = $(this).attr('field');
-        // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
-        // If it isn't undefined or its greater than 0
-        if (!isNaN(currentVal) && currentVal > 0) {
-            // Decrement one
-            $('input[name='+fieldName+']').val(currentVal - 1);
-        } else {
-            // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(0);
-        }
-    });
+  // This button will increment the value
+  $('.ps-plus').click(function(e){
+      // Stop acting like a button
+      e.preventDefault();
+      // Get the field name
+      fieldName = $(this).attr('field');
+      // Get its current value
+      var currentVal = parseInt($('input[name='+fieldName+']').val());
+      // If is not undefined
+      if (!isNaN(currentVal)) {
+          // Increment
+          $('input[name='+fieldName+']').val(currentVal + 1);
+      } else {
+          // Otherwise put a 0 there
+          $('input[name='+fieldName+']').val(0);
+      }
+  });
+  // This button will decrement the value till 0
+  $(".ps-minus").click(function(e) {
+      // Stop acting like a button
+      e.preventDefault();
+      // Get the field name
+      fieldName = $(this).attr('field');
+      // Get its current value
+      var currentVal = parseInt($('input[name='+fieldName+']').val());
+      // If it isn't undefined or its greater than 0
+      if (!isNaN(currentVal) && currentVal > 0) {
+          // Decrement one
+          $('input[name='+fieldName+']').val(currentVal - 1);
+      } else {
+          // Otherwise put a 0 there
+          $('input[name='+fieldName+']').val(0);
+      }
+  });
 
-    // HIRE LENGTH
+  // HIRE LENGTH
 
-    $('.hl-plus').click(function(e){
-        // Stop acting like a button
-        e.preventDefault();
-        // Get the field name
-        fieldName = $(this).attr('field');
-        // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
-        // If is not undefined
-        if (!isNaN(currentVal)) {
-            // Increment
-            $('input[name='+fieldName+']').val(currentVal + 1);
-        } else {
-            // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(0);
-        }
-    });
-    // This button will decrement the value till 0
-    $(".hl-minus").click(function(e) {
-        // Stop acting like a button
-        e.preventDefault();
-        // Get the field name
-        fieldName = $(this).attr('field');
-        // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
-        // If it isn't undefined or its greater than 0
-        if (!isNaN(currentVal) && currentVal > 0) {
-            // Decrement one
-            $('input[name='+fieldName+']').val(currentVal - 1);
-        } else {
-            // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(0);
-        }
-    });
+  $('.hl-plus').click(function(e){
+      // Stop acting like a button
+      e.preventDefault();
+      // Get the field name
+      fieldName = $(this).attr('field');
+      // Get its current value
+      var currentVal = parseInt($('input[name='+fieldName+']').val());
+      // If is not undefined
+      if (!isNaN(currentVal)) {
+          // Increment
+          $('input[name='+fieldName+']').val(currentVal + 1);
+      } else {
+          // Otherwise put a 0 there
+          $('input[name='+fieldName+']').val(0);
+      }
+  });
+  // This button will decrement the value till 0
+  $(".hl-minus").click(function(e) {
+      // Stop acting like a button
+      e.preventDefault();
+      // Get the field name
+      fieldName = $(this).attr('field');
+      // Get its current value
+      var currentVal = parseInt($('input[name='+fieldName+']').val());
+      // If it isn't undefined or its greater than 0
+      if (!isNaN(currentVal) && currentVal > 0) {
+          // Decrement one
+          $('input[name='+fieldName+']').val(currentVal - 1);
+      } else {
+          // Otherwise put a 0 there
+          $('input[name='+fieldName+']').val(0);
+      }
+  });
+
+// -------------------
+//    MAP API
+// -------------------
+
+  var token = 'pk.eyJ1IjoiZGFuaWVscmhvZGVzeSIsImEiOiJjamkzbjQwcngwMGFxM2tzMmpyZ2J6eDdwIn0.P3LtgHfNItEa3q8lvpRw1g'
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWVscmhvZGVzeSIsImEiOiJjamkzbjQwcngwMGFxM2tzMmpyZ2J6eDdwIn0.P3LtgHfNItEa3q8lvpRw1g';
+  var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v9',
+      center: [174.77701,-41.28868],
+      zoom: 5
+  });
+
+  var directions = new MapboxDirections({
+    accessToken: 'YOUR-MAPBOX-ACCESS-TOKEN',
+    unit: 'metric',
+    profile: 'mapbox/cycling'
+  });
+
+  map.on('load', function () {
+      map.addSource('dem', {
+          "type": "raster-dem",
+          "url": "mapbox://mapbox.terrain-rgb"
+      });
+      map.addLayer({
+          "id": "hillshading",
+          "source": "dem",
+          "type": "hillshade"
+      // insert below waterway-river-canal-shadow;
+      // where hillshading sits in the Mapbox Outdoors style
+      }, 'waterway-river-canal-shadow');
+  });
+
+  map.addControl(directions, 'top-left');
+
+  directions.on('route', function(direction){
+    console.log(directions.route["0"].distance / 1000 + "kms");
+  })
+
+
+
 
 });
