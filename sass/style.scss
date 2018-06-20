@@ -25,7 +25,7 @@
 // ------------
 
 #mainpage-div {
-  // display: none;
+  display: none;
   position: relative;
   width: 50%;
   margin: auto;
@@ -264,7 +264,7 @@
 
 #page4-div {
   display: flex;
-  display: none;
+  // display: none;
   position: relative;
   transform: translateY(9%);
   height: 785px;
@@ -287,7 +287,7 @@
   }
   .sidebar {
     height: 785px;
-    width: 390px;
+    width: 450px;
     border-top: 13px solid;
     border-right: 13px solid;
     border-color: #055F63;
