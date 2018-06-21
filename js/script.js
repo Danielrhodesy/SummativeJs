@@ -199,10 +199,7 @@ map.on('load', function () {
 });
 
 
-
-map.addControl(directions, 'top-left');
-
-directions.on('route', function(direction){
+directions.on('route', function(directions){
   console.log(directions.route["0"].distance / 1000 + "kms");
 });
 
