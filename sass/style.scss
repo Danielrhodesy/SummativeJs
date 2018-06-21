@@ -230,6 +230,7 @@
             border-radius: 75px 0px 0px 75px;
             background-color: #DDC137;
             border: 0px;
+            font-size: 90px;
           }
         }
         .number-plus {
@@ -240,6 +241,7 @@
             border-radius: 0px 75px 75px 0px;
             background-color: #DDC137;
             border: 0px;
+            font-size: 90px;
           }
         }
         .number-input {
@@ -250,7 +252,7 @@
             background-color: rgba( 163, 209, 216, 0);
             border: 0px;
             color: #055F63;
-            font-size: 90px;
+            font-size: 100px;
           }
         }
       }
@@ -274,7 +276,7 @@
     position: absolute;
     height: 0px;
     padding-top: 1%;
-    padding-left: 1%;
+    padding-left: 2%;
     .m-backbutton-wrapper {
       height: 60px;
       width: 60px;

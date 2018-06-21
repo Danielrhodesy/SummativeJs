@@ -1,14 +1,18 @@
 $(document).ready(function() {
 
+
 // -------------------
 // Fade in start up main-page
 // -------------------
 
+
 $('#animsition-mainpage').animsition();
+
 
 // -------------------
 // Animsition through pages
 // -------------------
+
 
   //Main page to page 2
   $('.here-button').click(function() {
@@ -46,9 +50,11 @@ $('#animsition-mainpage').animsition();
     });
   });
 
+
 // -------------------
 //    Back button
 // -------------------
+
 
   // Back from page 2 to main
   $('.v-backbutton-wrapper').click(function(){
@@ -86,9 +92,11 @@ $('#animsition-mainpage').animsition();
     });
   });
 
+
 // -------------------
 // PLUS MINUS FUNCTION
 // -------------------
+
 
   // PARTY SIZE
 
@@ -163,48 +171,76 @@ $('#animsition-mainpage').animsition();
       }
   });
 
+
 // -------------------
 //    MAP API
 // -------------------
 
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWVscmhvZGVzeSIsImEiOiJjamkzbjQwcngwMGFxM2tzMmpyZ2J6eDdwIn0.P3LtgHfNItEa3q8lvpRw1g';
-var map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v9',
-  center: [174.77701,-41.28868],
-  zoom: 5
-});
+(function(){
 
-map.addControl(new MapboxDirections({
-  accessToken: mapboxgl.accessToken,
-  unit:'metric'
-}), 'top-left');
+  var token = 'pk.eyJ1IjoidmVyYXRlY2giLCJhIjoiY2phYmZ1NXFmMHIwMDM1cGV4bHV4bHhzbSJ9.gbT5J_uXxbjRRuj00D7Xeg';
+
+  mapboxgl.accessToken = token
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [174.77701,-41.28868],
+    zoom: 5
+  });
+
+  var directions = new MapboxDirections({
+    accessToken: token,
+    unit: 'metric',
+    // Hiding the direction ui controls
+  });
+
+     // HILL SHADING
+
+  map.on('load', function () {
+      map.addSource('dem', {
+          "type": "raster-dem",
+          "url": "mapbox://mapbox.terrain-rgb"
+      });
+      map.addLayer({
+          "id": "hillshading",
+          "source": "dem",
+          "type": "hillshade"
+      // insert below waterway-river-canal-shadow;
+      // where hillshading sits in the Mapbox Outdoors style
+      }, 'waterway-river-canal-shadow');
+  });
+
+  map.addControl(directions, 'top-left');
+
+  directions.on('route', function(direction){
+    console.log(directions.route["0"].distance / 1000 + "kms");
+  });
+
+})();
 
 
-   // HILL SHADING
-
-map.on('load', function () {
-    map.addSource('dem', {
-        "type": "raster-dem",
-        "url": "mapbox://mapbox.terrain-rgb"
-    });
-    map.addLayer({
-        "id": "hillshading",
-        "source": "dem",
-        "type": "hillshade"
-    // insert below waterway-river-canal-shadow;
-    // where hillshading sits in the Mapbox Outdoors style
-    }, 'waterway-river-canal-shadow');
-});
+// -------------------
+//   ADDING VALUES
+// -------------------
 
 
 
-map.addControl(directions, 'top-left');
+var motorhome = document.getElementsByClassName('motorhome-button')
+var largecar = document.getElementsByClassName('largecar-button')
 
-directions.on('route', function(direction){
-  console.log(directions.route["0"].distance / 1000 + "kms");
-});
+
+  function addvalues() {
+
+  }
+
+
+
+
+
+
+
 
 
 

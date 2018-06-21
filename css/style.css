@@ -181,7 +181,8 @@
             width: 97px;
             border-radius: 75px 0px 0px 75px;
             background-color: #DDC137;
-            border: 0px; }
+            border: 0px;
+            font-size: 90px; }
         #page3-div .master-container--ph .phsingle-container .number-container .number-plus {
           float: right; }
           #page3-div .master-container--ph .phsingle-container .number-container .number-plus input {
@@ -189,7 +190,8 @@
             width: 97px;
             border-radius: 0px 75px 75px 0px;
             background-color: #DDC137;
-            border: 0px; }
+            border: 0px;
+            font-size: 90px; }
         #page3-div .master-container--ph .phsingle-container .number-container .number-input input {
           width: 117.2px;
           height: 111px;
@@ -197,7 +199,7 @@
           background-color: rgba(163, 209, 216, 0);
           border: 0px;
           color: #055F63;
-          font-size: 90px; }
+          font-size: 100px; }
 
 #page4-div {
   display: flex;
@@ -210,7 +212,7 @@
     position: absolute;
     height: 0px;
     padding-top: 1%;
-    padding-left: 1%; }
+    padding-left: 2%; }
     #page4-div .backbutton .m-backbutton-wrapper {
       height: 60px;
       width: 60px;
