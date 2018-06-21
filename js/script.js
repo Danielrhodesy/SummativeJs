@@ -182,6 +182,8 @@ $('#animsition-mainpage').animsition();
     profile: 'mapbox/cycling'
   });
 
+  // HILL SHADING
+
   map.on('load', function () {
       map.addSource('dem', {
           "type": "raster-dem",
@@ -195,6 +197,8 @@ $('#animsition-mainpage').animsition();
       // where hillshading sits in the Mapbox Outdoors style
       }, 'waterway-river-canal-shadow');
   });
+
+
 
   map.addControl(directions, 'top-left');
 
