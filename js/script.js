@@ -167,44 +167,44 @@ $('#animsition-mainpage').animsition();
 //    MAP API
 // -------------------
 
-  var token = 'pk.eyJ1IjoiZGFuaWVscmhvZGVzeSIsImEiOiJjamkzbjQwcngwMGFxM2tzMmpyZ2J6eDdwIn0.P3LtgHfNItEa3q8lvpRw1g'
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWVscmhvZGVzeSIsImEiOiJjamkzbjQwcngwMGFxM2tzMmpyZ2J6eDdwIn0.P3LtgHfNItEa3q8lvpRw1g';
-  var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v9',
-      center: [174.77701,-41.28868],
-      zoom: 5
-  });
 
-  var directions = new MapboxDirections({
-    accessToken: 'YOUR-MAPBOX-ACCESS-TOKEN',
-    unit: 'metric',
-    profile: 'mapbox/cycling'
-  });
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWVscmhvZGVzeSIsImEiOiJjamkzbjQwcngwMGFxM2tzMmpyZ2J6eDdwIn0.P3LtgHfNItEa3q8lvpRw1g';
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v9',
+  center: [174.77701,-41.28868],
+  zoom: 5
+});
 
-  // HILL SHADING
-
-  map.on('load', function () {
-      map.addSource('dem', {
-          "type": "raster-dem",
-          "url": "mapbox://mapbox.terrain-rgb"
-      });
-      map.addLayer({
-          "id": "hillshading",
-          "source": "dem",
-          "type": "hillshade"
-      // insert below waterway-river-canal-shadow;
-      // where hillshading sits in the Mapbox Outdoors style
-      }, 'waterway-river-canal-shadow');
-  });
+map.addControl(new MapboxDirections({
+  accessToken: mapboxgl.accessToken,
+  unit:'metric'
+}), 'top-left');
 
 
+   // HILL SHADING
 
-  map.addControl(directions, 'top-left');
+map.on('load', function () {
+    map.addSource('dem', {
+        "type": "raster-dem",
+        "url": "mapbox://mapbox.terrain-rgb"
+    });
+    map.addLayer({
+        "id": "hillshading",
+        "source": "dem",
+        "type": "hillshade"
+    // insert below waterway-river-canal-shadow;
+    // where hillshading sits in the Mapbox Outdoors style
+    }, 'waterway-river-canal-shadow');
+});
 
-  directions.on('route', function(direction){
-    console.log(directions.route["0"].distance / 1000 + "kms");
-  })
+
+
+map.addControl(directions, 'top-left');
+
+directions.on('route', function(direction){
+  console.log(directions.route["0"].distance / 1000 + "kms");
+});
 
 
 
