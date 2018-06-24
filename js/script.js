@@ -231,9 +231,7 @@ var motorhome = document.getElementsByClassName('motorhome-button')
 var largecar = document.getElementsByClassName('largecar-button')
 
 
-  function addvalues() {
 
-  }
 
 
 
