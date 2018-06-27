@@ -9,9 +9,9 @@
     border-radius: 50%;
     text-align: center; }
     .about-icon--wrapper .about-icon img {
-      height: 79px;
-      width: 79px;
-      margin-top: 10px; }
+      height: 70px;
+      width: 70px;
+      margin-top: 15px; }
 
 #mainpage-div {
   display: none;
@@ -36,6 +36,7 @@
       #mainpage-div .here-button a h4 {
         margin: 0px;
         border: white solid 1px;
+        border-radius: 50px;
         text-align: center;
         font-size: 36px;
         font-weight: 400;
@@ -44,72 +45,10 @@
         font-family: 'Questrial', sans-serif; }
     #mainpage-div .here-button h4:hover {
       text-decoration: none;
-      background-color: white;
-      color: rgba(0, 0, 0, 0.4); }
+      font-weight: 900;
+      border: white solid 2px; }
 
 #page2-div {
-  display: none;
-  position: relative;
-  top: 50%;
-  transform: translateY(25%);
-  height: 660px;
-  width: 100%;
-  background-color: rgba(163, 209, 216, 0.92);
-  border-top: #A3D1D8;
-  border-bottom: #A3D1D8;
-  padding-top: 20px;
-  box-shadow: 0px 6px 40px black; }
-  #page2-div .backbutton {
-    height: 0px;
-    padding-left: 2%; }
-    #page2-div .backbutton .v-backbutton-wrapper {
-      height: 60px;
-      width: 60px;
-      padding-top: 20px; }
-      #page2-div .backbutton .v-backbutton-wrapper img {
-        height: 60px;
-        width: auto; }
-  #page2-div h1 {
-    text-align: center;
-    font-size: 84px;
-    font-weight: bold;
-    color: white;
-    font-family: 'Questrial', sans-serif; }
-  #page2-div .master-contanier--v {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 4em;
-    width: 90%;
-    padding-left: 9%; }
-    #page2-div .master-contanier--v .single-container {
-      height: 375px;
-      width: 227px;
-      background-color: #055F63;
-      border-radius: 5px;
-      box-shadow: 3px 3.5px 5px; }
-      #page2-div .master-contanier--v .single-container .image-wrapper {
-        text-align: center; }
-        #page2-div .master-contanier--v .single-container .image-wrapper img {
-          text-align: center;
-          height: 128px;
-          width: auto; }
-      #page2-div .master-contanier--v .single-container p {
-        text-align: center;
-        color: white;
-        font-family: 'Questrial', sans-serif;
-        font-weight: bold;
-        font-size: 18px; }
-      #page2-div .master-contanier--v .single-container .button-wrapper {
-        text-align: center; }
-        #page2-div .master-contanier--v .single-container .button-wrapper button {
-          border-radius: 3px;
-          height: 40px;
-          width: 60px;
-          color: black;
-          background-color: #DDC137; }
-
-#page3-div {
   display: none;
   position: relative;
   top: 50%;
@@ -119,82 +58,82 @@
   padding-top: 20px;
   box-shadow: 0px 6px 40px black;
   background-color: rgba(163, 209, 216, 0.92); }
-  #page3-div .backbutton {
+  #page2-div .backbutton {
     height: 0px;
     padding-left: 2%; }
-    #page3-div .backbutton .ph-backbutton-wrapper {
+    #page2-div .backbutton .ph-backbutton-wrapper {
       height: 60px;
       width: 60px;
       padding-top: 20px; }
-      #page3-div .backbutton .ph-backbutton-wrapper img {
+      #page2-div .backbutton .ph-backbutton-wrapper img {
         height: 60px;
         width: auto; }
-  #page3-div .ph-confirmbutton {
+  #page2-div #ph-confirmbutton {
     text-align: center;
     padding-top: 4.5em; }
-    #page3-div .ph-confirmbutton button {
+    #page2-div #ph-confirmbutton button {
       border-radius: 3px;
       height: 60px;
       width: 240px;
       color: grey;
       background-color: #DDC137;
       text-align: center; }
-      #page3-div .ph-confirmbutton button p {
+      #page2-div #ph-confirmbutton button p {
         color: black;
         font-size: 30px;
         padding-top: 3px; }
-  #page3-div h1 {
+  #page2-div h1 {
     padding-left: 7%;
     text-align: center;
     font-size: 84px;
     font-weight: bold;
     color: white;
     font-family: 'Questrial', sans-serif; }
-  #page3-div .master-container--ph {
+  #page2-div .master-container--ph {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-top: 3em;
     width: 60%;
     margin-left: 20%; }
-    #page3-div .master-container--ph .phsingle-container {
+    #page2-div .master-container--ph .phsingle-container {
       height: 320px;
       width: 389px;
       background-color: #055F63;
       border-radius: 5px;
       box-shadow: 3px 3.5px 5px; }
-      #page3-div .master-container--ph .phsingle-container h2 {
+      #page2-div .master-container--ph .phsingle-container h2 {
         font-size: 80;
         color: white;
         text-align: center;
         font-weight: bold;
         padding-top: 1em; }
-      #page3-div .master-container--ph .phsingle-container .number-container {
+      #page2-div .master-container--ph .phsingle-container .number-container {
         height: 111px;
         width: 80%;
         margin: 0 auto;
         background-color: #A3D1D8;
         border-radius: 75px;
         margin-top: 4em; }
-        #page3-div .master-container--ph .phsingle-container .number-container .number-minus {
+        #page2-div .master-container--ph .phsingle-container .number-container .number-minus {
           float: left; }
-          #page3-div .master-container--ph .phsingle-container .number-container .number-minus input {
+          #page2-div .master-container--ph .phsingle-container .number-container .number-minus input {
             height: 111px;
             width: 97px;
             border-radius: 75px 0px 0px 75px;
             background-color: #DDC137;
             border: 0px;
             font-size: 90px; }
-        #page3-div .master-container--ph .phsingle-container .number-container .number-plus {
+        #page2-div .master-container--ph .phsingle-container .number-container .number-plus {
           float: right; }
-          #page3-div .master-container--ph .phsingle-container .number-container .number-plus input {
+          #page2-div .master-container--ph .phsingle-container .number-container .number-plus input {
             height: 111px;
             width: 97px;
             border-radius: 0px 75px 75px 0px;
             background-color: #DDC137;
             border: 0px;
             font-size: 90px; }
-        #page3-div .master-container--ph .phsingle-container .number-container .number-input input {
+        #page2-div .master-container--ph .phsingle-container .number-container .number-input input {
           width: 117.2px;
           height: 111px;
           text-align: center;
@@ -202,6 +141,69 @@
           border: 0px;
           color: #055F63;
           font-size: 100px; }
+
+#page3-div {
+  display: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(25%);
+  height: 660px;
+  width: 100%;
+  border-top: #07B0DA solid 5px;
+  background-color: rgba(163, 209, 216, 0.92);
+  border-top: #A3D1D8;
+  border-bottom: #A3D1D8;
+  padding-top: 20px;
+  box-shadow: 0px 6px 40px black; }
+  #page3-div .backbutton {
+    height: 0px;
+    padding-left: 2%; }
+    #page3-div .backbutton .v-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px; }
+      #page3-div .backbutton .v-backbutton-wrapper img {
+        height: 60px;
+        width: auto; }
+  #page3-div h1 {
+    text-align: center;
+    font-size: 84px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Questrial', sans-serif; }
+  #page3-div .master-contanier--v {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 4em;
+    width: 90%;
+    padding-left: 9%; }
+    #page3-div .master-contanier--v .single-container {
+      height: 375px;
+      width: 227px;
+      background-color: #055F63;
+      border-radius: 5px;
+      box-shadow: 3px 3.5px 5px; }
+      #page3-div .master-contanier--v .single-container .image-wrapper {
+        text-align: center; }
+        #page3-div .master-contanier--v .single-container .image-wrapper img {
+          text-align: center;
+          height: 128px;
+          width: auto; }
+      #page3-div .master-contanier--v .single-container p {
+        text-align: center;
+        color: white;
+        font-family: 'Questrial', sans-serif;
+        font-weight: bold;
+        font-size: 18px; }
+      #page3-div .master-contanier--v .single-container .button-wrapper {
+        text-align: center; }
+        #page3-div .master-contanier--v .single-container .button-wrapper button {
+          border-radius: 3px;
+          height: 40px;
+          width: 60px;
+          color: black;
+          background-color: #DDC137; }
 
 #page4-div {
   display: flex;

@@ -13,9 +13,9 @@
     border-radius: 50%;
     text-align: center;
     img {
-      height: 79px;
-      width: 79px;
-      margin-top: 10px;
+      height: 70px;
+      width: 70px;
+      margin-top: 15px;
     }
   }
 }
@@ -50,6 +50,7 @@
       h4 {
         margin: 0px;
         border: white solid 1px;
+        border-radius: 50px;
         text-align: center;
         font-size: 36px;
         font-weight: 400;
@@ -60,8 +61,8 @@
     }
     h4:hover {
       text-decoration: none;
-      background-color: white;
-      color: rgba( 0, 0, 0, 0.4);
+      font-weight: 900;
+      border: white solid 2px;
     }
   }
 }
@@ -71,84 +72,6 @@
 // ------------
 
 #page2-div {
-  display: none;
-  position: relative;
-  top: 50%;
-  transform: translateY(25%);
-  height: 660px;
-  width: 100%;
-  background-color: rgba( 163, 209, 216, 0.92);
-  border-top: #A3D1D8;
-  border-bottom: #A3D1D8;
-  padding-top: 20px;
-  box-shadow: 0px 6px 40px black;
-  .backbutton {
-    height: 0px;
-    padding-left: 2%;
-    .v-backbutton-wrapper {
-      height: 60px;
-      width: 60px;
-      padding-top: 20px;
-      img {
-        height: 60px;
-        width: auto;
-      }
-    }
-  }
-  h1 {
-    text-align: center;
-    font-size: 84px;
-    font-weight: bold;
-    color: white;
-    font-family: 'Questrial', sans-serif;
-  }
-  .master-contanier--v {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 4em;
-    width: 90%;
-    padding-left: 9%;
-    .single-container {
-      height: 375px;
-      width: 227px;
-      background-color: #055F63;
-      border-radius: 5px;
-      box-shadow: 3px 3.5px 5px;
-      .image-wrapper {
-        text-align: center;
-        img {
-          text-align: center;
-          height: 128px;
-          width: auto;
-        }
-      }
-      p {
-        text-align: center;
-        color: white;
-        font-family: 'Questrial', sans-serif;
-        font-weight: bold;
-        font-size: 18px;
-      }
-      .button-wrapper {
-        text-align: center;
-        button {
-          border-radius: 3px;
-          height: 40px;
-          width: 60px;
-          color: black;
-          background-color: #DDC137;
-        }
-      }
-    }
-  }
-}
-
-// ------------
-//  PAGE 3 (TRIP DETAILS)
-// ------------
-
-#page3-div {
   display: none;
   position: relative;
   top: 50%;
@@ -172,7 +95,7 @@
       }
     }
   }
-  .ph-confirmbutton {
+  #ph-confirmbutton {
     text-align: center;
     padding-top: 4.5em;
     button {
@@ -256,6 +179,85 @@
             color: #055F63;
             font-size: 100px;
           }
+        }
+      }
+    }
+  }
+}
+
+// ------------
+//  PAGE 3 (TRIP DETAILS)
+// ------------
+
+#page3-div {
+  display: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(25%);
+  height: 660px;
+  width: 100%;
+  border-top: #07B0DA solid 5px;
+  background-color: rgba( 163, 209, 216, 0.92);
+  border-top: #A3D1D8;
+  border-bottom: #A3D1D8;
+  padding-top: 20px;
+  box-shadow: 0px 6px 40px black;
+  .backbutton {
+    height: 0px;
+    padding-left: 2%;
+    .v-backbutton-wrapper {
+      height: 60px;
+      width: 60px;
+      padding-top: 20px;
+      img {
+        height: 60px;
+        width: auto;
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+    font-size: 84px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+  }
+  .master-contanier--v {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 4em;
+    width: 90%;
+    padding-left: 9%;
+    .single-container {
+      height: 375px;
+      width: 227px;
+      background-color: #055F63;
+      border-radius: 5px;
+      box-shadow: 3px 3.5px 5px;
+      .image-wrapper {
+        text-align: center;
+        img {
+          text-align: center;
+          height: 128px;
+          width: auto;
+        }
+      }
+      p {
+        text-align: center;
+        color: white;
+        font-family: 'Questrial', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .button-wrapper {
+        text-align: center;
+        button {
+          border-radius: 3px;
+          height: 40px;
+          width: 60px;
+          color: black;
+          background-color: #DDC137;
         }
       }
     }

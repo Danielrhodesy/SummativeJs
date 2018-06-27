@@ -69,7 +69,6 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
       }
   });
 
-
   $(".ps-minus").click(function psMinus(e) {
       e.preventDefault();
       fieldName = $(this).attr('field');
@@ -81,15 +80,6 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
       }
   });
 
-function vehiclechoice() {
-
-  if (currentVal >= obj.seat[0] && currentVal <= obj.seat[1] && hlcurrentVal >= obj.days[0] && hlcurrentVal <= obj.days[0]) {
-
-  } else {
-    document.getElementById('motorhome-div').style.backgroundColor = "red";
-
-  }
-}
 
   // HIRE LENGTH
 
@@ -114,6 +104,22 @@ function vehiclechoice() {
           $('input[name='+fieldName+']').val(0);
       }
   });
+
+
+  function vehiclechoice() {
+      console.log('string');
+    if (currentVal >= obj.seat[0] && currentVal <= obj.seat[1] && hlcurrentVal >= obj.days[0] && hlcurrentVal <= obj.days[0]) {
+
+    } else {
+      document.getElementById('motorhome-div').style.backgroundColor = "grey";
+
+    }
+  }
+
+$('#ph-confirmbutton').on('click', function(){
+  console.log('string');
+})
+
 
 
 // -------------------
