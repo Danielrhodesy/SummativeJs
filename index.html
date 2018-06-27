@@ -44,9 +44,53 @@
         </div>
       </div>
 
-<!-- PAGE 2 (Vehicle CHOICE) -->
+<!-- PAGE 2 (DETAILS) -->
 
       <div id="page2-div">
+        <div class="backbutton ph-backbutton">
+          <div class="ph-backbutton-wrapper">
+            <img src="images/backbutton.png" alt="Back Button">
+          </div>
+        </div>
+        <h1>Party Size & Hire Length</h1>
+        <div class="master-container--ph">
+          <div class="phsingle-container ps-container">
+            <h2>Party Size (Persons)</h2>
+            <div class="number-container">
+              <div class="number-minus">
+                <input type='button' value='-' class='ps-minus' field='ps-quantity'>
+              </div>
+              <div class="number-plus">
+                <input type='button' value='+' class='ps-plus' field='ps-quantity'>
+              </div>
+              <div class="number-input">
+                <input class="ps-input" type='text' name='ps-quantity' value='1' class='ps-qty' min="1" max="6">
+              </div>
+            </div>
+          </div>
+          <div class="phsingle-container hl-container">
+            <h2>Hire Length (Days)</h2>
+            <div class="number-container">
+              <div class="number-minus">
+                <input type='button' value='-' class='hl-minus' field='hl-quantity'>
+              </div>
+              <div class="number-plus">
+                <input type='button' value='+' class='hl-plus' field='hl-quantity'>
+              </div>
+              <div class="number-input">
+                <input class="hl-input" type='text' name='hl-quantity' value='1' class='hl-qty' min="1" max="15">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ph-confirmbutton">
+          <button class="ph-button" type="button" name="button"><p>Confirm</p></button>
+        </div>
+      </div>
+
+<!-- PAGE 3 (Vehicle CHOICE) -->
+
+      <div id="page3-div">
         <div class="backbutton v-backbutton">
           <div class="v-backbutton-wrapper">
             <img src="images/backbutton.png" alt="Back Button">
@@ -54,7 +98,7 @@
         </div>
         <h1>Which Vehicle</h1>
         <div class="master-contanier--v">
-          <div class="single-container motorhome">
+          <div class="single-container motorhome" id="motorhome-div">
             <div class="image-wrapper">
               <img src="images/caravan.png" alt="MotorHome">
             </div>
@@ -64,7 +108,7 @@
             <br>
             <p>Fueluse: $17 perH</p>
             <div class="button-wrapper">
-              <button class="v-button motorhome-button" type="button" name="button">$200</button>
+              <button class="v-button"  id="motorhome-button" type="button" name="button">$200</button>
             </div>
           </div>
           <div class="single-container largecar">
@@ -77,7 +121,7 @@
             <br>
             <p>Fueluse: $9.7 perH</p>
             <div class="button-wrapper">
-              <button class="v-button" type="button" name="button">$144</button>
+              <button class="v-button" id="largecar-button" type="button" name="button">$144</button>
             </div>
           </div>
           <div class="single-container smallcar">
@@ -90,7 +134,7 @@
             <br>
             <p>Fueluse: $8.5 perH</p>
             <div class="button-wrapper">
-              <button class="v-button" type="button" name="button">$129</button>
+              <button class="v-button" id="smallcar-button" type="button" name="button">$129</button>
             </div>
           </div>
           <div class="single-container bike">
@@ -103,53 +147,9 @@
             <br>
             <p>Fueluse: $3.7 perH</p>
             <div class="button-wrapper">
-              <button class="v-button" type="button" name="button">$109</button>
+              <button class="v-button" id="motorbike-button" type="button" name="button">$109</button>
             </div>
           </div>
-        </div>
-      </div>
-
-<!-- PAGE 3 (DETAILS) -->
-
-      <div id="page3-div">
-        <div class="backbutton ph-backbutton">
-          <div class="ph-backbutton-wrapper">
-            <img src="images/backbutton.png" alt="Back Button">
-          </div>
-        </div>
-        <h1>Party Size & Hire Length</h1>
-        <div class="master-container--ph">
-          <div class="phsingle-container ps-container">
-            <h2>Party Size (Persons)</h2>
-            <div class="number-container">
-              <div class="number-minus">
-                <input type='button' value='-' class='ps-minus' field='ps-quantity' />
-              </div>
-              <div class="number-plus">
-                <input type='button' value='+' class='ps-plus' field='ps-quantity' />
-              </div>
-              <div class="number-input">
-                <input type='text' name='ps-quantity' value='0' class='ps-qty' />
-              </div>
-            </div>
-          </div>
-          <div class="phsingle-container hl-container">
-            <h2>Hire Length (Days)</h2>
-            <div class="number-container">
-              <div class="number-minus">
-                <input type='button' value='-' class='hl-minus' field='hl-quantity' />
-              </div>
-              <div class="number-plus">
-                <input type='button' value='+' class='hl-plus' field='hl-quantity' />
-              </div>
-              <div class="number-input">
-                <input type='text' name='hl-quantity' value='0' class='hl-qty' />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ph-confirmbutton">
-          <button class="ph-button" type="button" name="button"><p>Confirm</p></button>
         </div>
       </div>
 
@@ -188,7 +188,7 @@
         <div class="main-container--c">
           <h2>Your Trip:</h2>
           <div class="main-container--c--wrapper">
-            <div class="yt-container yt-vehicle">
+            <div class="yt-container" id="yt-vehicle">
               <h4>Vehicle:</h4>
             </div>
             <div class="yt-container yt-partysize">
@@ -219,6 +219,7 @@
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.css' type='text/css' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="animsition/animsition.js"></script>
+    <script src="js/object.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
