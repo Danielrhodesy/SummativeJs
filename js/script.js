@@ -14,83 +14,41 @@ $('#animsition-mainpage').animsition();
 // -------------------
 
 
-  //Main page to page 2
-  $('.here-button').click(function() {
-    $('#mainpage-div').fadeOut(function() {
-      $('#mainpage-div').hide(function() {
-        $('#page2-div').fadeIn();
+  function animsitionCode (clicked, divA, divB, divC) {
+    $(clicked).click(function(){
+      $(divA).fadeOut(function(){
+        $(divB).hide(function(){
+          $(divC).fadeIn();
+        });
       });
     });
-  });
+  };
 
-  // Page 2 to page 3
-  $('.v-button').click(function() {
-    $('#page2-div').fadeOut(function() {
-      $('#page2-div').hide(function() {
-        $('#page3-div').fadeIn();
-      });
-    });
-  });
-
-  // Page 3 to page 4
-  $('.ph-button').click(function() {
-    $('#page3-div').fadeOut(function() {
-      $('#page3-div').hide(function() {
-        $('#page4-div').fadeIn();
-      });
-    });
-  });
-
-  // Page 4 to page 5
-  $('.m-button').click(function() {
-    $('#page4-div').fadeOut(function() {
-      $('#page4-div').hide(function() {
-        $('#page5-div').fadeIn();
-      });
-    });
-  });
+animsitionCode('.here-button', '#mainpage-div', '#mainpage-div', '#page2-div')
+animsitionCode('.ph-button', '#page2-div', '#page2-div', '#page3-div')
+animsitionCode('.v-button', '#page3-div', '#page3-div', '#page4-div')
+animsitionCode('.m-button', '#page4-div', '#page4-div', '#page5-div')
 
 
 // -------------------
-//    Back button
+//     Back button
 // -------------------
 
 
-  // Back from page 2 to main
-  $('.v-backbutton-wrapper').click(function(){
-    $('#page2-div').fadeOut(function(){
-      $('#page2-div').hide(function(){
-        $('#mainpage-div').fadeIn();
+function backAnimsitionCode (bclicked, backA, backB, backC) {
+  $(bclicked).click(function(){
+    $(backA).fadeOut(function(){
+      $(backB).hide(function(){
+        $(backC).fadeIn();
       });
     });
   });
+};
 
-  //Back from page 3 to page 2
-  $('.ph-backbutton-wrapper').click(function(){
-    $('#page3-div').fadeOut(function(){
-      $('#page3-div').hide(function(){
-        $('#page2-div').fadeIn();
-      });
-    });
-  });
-
-  //Back from page 4 to page 3
-  $('.m-backbutton-wrapper').click(function(){
-    $('#page4-div').fadeOut(function(){
-      $('#page4-div').hide(function(){
-        $('#page3-div').fadeIn();
-      });
-    });
-  });
-
-  //Back from page 5 to page 4
-  $('.c-backbutton-wrapper').click(function(){
-    $('#page5-div').fadeOut(function(){
-      $('#page5-div').hide(function(){
-        $('#page4-div').fadeIn();
-      });
-    });
-  });
+backAnimsitionCode ('.ph-backbutton-wrapper', '#page2-div', '#page2-div', '#mainpage-div')
+backAnimsitionCode ('.v-backbutton-wrapper', '#page3-div', '#page3-div', '#page2-div')
+backAnimsitionCode ('.m-backbutton-wrapper', '#page4-div', '#page4-div', '#page3-div')
+backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4-div')
 
 
 // -------------------
@@ -100,80 +58,66 @@ $('#animsition-mainpage').animsition();
 
   // PARTY SIZE
 
-  // This button will increment the value
-  $('.ps-plus').click(function(e){
-      // Stop acting like a button
+  $('.ps-plus').click(function psAdd(e){
       e.preventDefault();
-      // Get the field name
       fieldName = $(this).attr('field');
-      // Get its current value
       var currentVal = parseInt($('input[name='+fieldName+']').val());
-      // If is not undefined
       if (!isNaN(currentVal)) {
-          // Increment
           $('input[name='+fieldName+']').val(currentVal + 1);
       } else {
-          // Otherwise put a 0 there
           $('input[name='+fieldName+']').val(0);
       }
   });
-  // This button will decrement the value till 0
-  $(".ps-minus").click(function(e) {
-      // Stop acting like a button
+
+
+  $(".ps-minus").click(function psMinus(e) {
       e.preventDefault();
-      // Get the field name
       fieldName = $(this).attr('field');
-      // Get its current value
       var currentVal = parseInt($('input[name='+fieldName+']').val());
-      // If it isn't undefined or its greater than 0
       if (!isNaN(currentVal) && currentVal > 0) {
-          // Decrement one
           $('input[name='+fieldName+']').val(currentVal - 1);
       } else {
-          // Otherwise put a 0 there
-          $('input[name='+fieldName+']').val(0);
+        $('input[name='+fieldName+']').val(0);
       }
   });
+
+function vehiclechoice() {
+
+  if (currentVal >= obj.seat[0] && currentVal <= obj.seat[1] && hlcurrentVal >= obj.days[0] && hlcurrentVal <= obj.days[0]) {
+
+  } else {
+    document.getElementById('motorhome-div').style.backgroundColor = "red";
+
+  }
+}
 
   // HIRE LENGTH
 
-  $('.hl-plus').click(function(e){
-      // Stop acting like a button
+  $('.hl-plus').click(function hlPlus(e){
       e.preventDefault();
-      // Get the field name
       fieldName = $(this).attr('field');
-      // Get its current value
-      var currentVal = parseInt($('input[name='+fieldName+']').val());
-      // If is not undefined
-      if (!isNaN(currentVal)) {
-          // Increment
-          $('input[name='+fieldName+']').val(currentVal + 1);
+      var hlcurrentVal = parseInt($('input[name='+fieldName+']').val());
+      if (!isNaN(hlcurrentVal)) {
+          $('input[name='+fieldName+']').val(hlcurrentVal + 1);
       } else {
-          // Otherwise put a 0 there
           $('input[name='+fieldName+']').val(0);
       }
   });
-  // This button will decrement the value till 0
-  $(".hl-minus").click(function(e) {
-      // Stop acting like a button
+
+  $(".hl-minus").click(function hlMinus(e) {
       e.preventDefault();
-      // Get the field name
       fieldName = $(this).attr('field');
-      // Get its current value
-      var currentVal = parseInt($('input[name='+fieldName+']').val());
-      // If it isn't undefined or its greater than 0
-      if (!isNaN(currentVal) && currentVal > 0) {
-          // Decrement one
-          $('input[name='+fieldName+']').val(currentVal - 1);
+      var hlcurrentVal = parseInt($('input[name='+fieldName+']').val());
+      if (!isNaN(hlcurrentVal) && hlcurrentVal > 0) {
+          $('input[name='+fieldName+']').val(hlcurrentVal - 1);
       } else {
-          // Otherwise put a 0 there
           $('input[name='+fieldName+']').val(0);
       }
   });
 
 
 // -------------------
-//    MAP API
+//      MAP API
 // -------------------
 
 
@@ -216,8 +160,8 @@ $('#animsition-mainpage').animsition();
 
   directions.on('route', function(direction){
     console.log(directions.route["0"].distance / 1000 + "kms");
-  });
 
+  });
 })();
 
 
@@ -226,21 +170,47 @@ $('#animsition-mainpage').animsition();
 // -------------------
 
 
+// var partysize = document.getElementsByClassName('ps-input')
+// var hirelength = document.getElementsByClassName('hl-input')
+//
+// function detailsFunction() {
+//
+// // var motorhome = document.getElementsByClassName('motorhome-button')
+// // var largecar = document.getElementsByClassName('largecar-button')
+// // var smallcar = document.getElementsByClassName('smallcar-button')
+// // var motorbike = document.getElementsByClassName('motorbike-button')
+//
+// };
+//
+// console.log(partysize);
 
-var motorhome = document.getElementsByClassName('motorhome-button')
-var largecar = document.getElementsByClassName('largecar-button')
+
+// -------------------
+//  APPEDNING DETAILS
+// -------------------
 
 
+// APPENDING VEHICLE
 
+function vehicleconfirm (vcClicked, image) {
 
+  document.getElementById(vcClicked).addEventListener('click', function() {
+    var src = document.getElementById('yt-vehicle');
+    var creatPic = document.createElement('img');
 
+    creatPic.setAttribute('src', image);
+    creatPic.setAttribute('height', '160px');
+    creatPic.setAttribute('width', 'auto');
 
+    src.appendChild(creatPic);
 
+  });
+};
 
-
-
-
-
+vehicleconfirm ('motorhome-button', 'images/caravan.png')
+vehicleconfirm ('largecar-button', 'images/suv.png')
+vehicleconfirm ('smallcar-button', 'images/automobile.png')
+vehicleconfirm ('motorbike-button', 'images/motor-sports.png')
 
 
 });
