@@ -226,6 +226,7 @@ function vehicleconfirm (vcClicked, image) {
   });
 };
 
+
 vehicleconfirm ('motorhome-button', 'images/caravan.png')
 vehicleconfirm ('largecar-button', 'images/suv.png')
 vehicleconfirm ('smallcar-button', 'images/automobile.png')
@@ -238,17 +239,21 @@ function hlConfirm(value, valuePlace) {
 
   document.getElementById('ph-confirmbutton').addEventListener('click', function() {
     var src = document.getElementById(valuePlace)
-    
+  
 
     seatsNeeded.setAttribute('fontsize','70px')
 
     src.appendChild(value);
-    console.log(src +'what');
   });
 };
 
 hlConfirm(seatsNeeded, 'yt-partysize')
 hlConfirm(daysNeeded, 'yt-hirelength')
+
+
+
+
+
 
 // ENDING BRACKET
 
