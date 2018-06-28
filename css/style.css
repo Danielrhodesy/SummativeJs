@@ -208,7 +208,7 @@
   display: flex;
   display: none;
   position: relative;
-  transform: translateY(9%);
+  transform: translateY(21.4%);
   height: 785px;
   width: 100%;
   background-color: rgba(163, 209, 216, 0.92); }
@@ -225,11 +225,13 @@
         height: 60px;
         width: auto; }
   #page4-div .sidebar {
+    position: absolute;
     height: 785px;
     width: 450px;
     border-top: 13px solid;
     border-right: 13px solid;
-    border-color: #055F63; }
+    border-color: #055F63;
+    margin-right: 0px; }
     #page4-div .sidebar h2 {
       font-size: 80;
       color: white;
@@ -252,13 +254,13 @@
           color: black;
           font-size: 30px;
           padding-top: 3px; }
-  #page4-div .mapapi {
+  #page4-div .mapbox-wrapper {
     float: right;
-    width: 80%;
-    height: 784px;
-    border-top: 13px solid #055F63; }
-    #page4-div .mapapi #map {
-      position: absolute;
+    height: 785px;
+    width: 70%; }
+    #page4-div .mapbox-wrapper #map {
+      float: right;
+      position: relative;
       top: 0;
       bottom: 0;
       width: 100%;

@@ -272,7 +272,7 @@
   display: flex;
   display: none;
   position: relative;
-  transform: translateY(9%);
+  transform: translateY(21.4%);
   height: 785px;
   width: 100%;
   background-color: rgba( 163, 209, 216, 0.92);
@@ -292,11 +292,13 @@
     }
   }
   .sidebar {
+    position: absolute;
     height: 785px;
     width: 450px;
     border-top: 13px solid;
     border-right: 13px solid;
     border-color: #055F63;
+    margin-right: 0px;
     h2 {
       font-size: 80;
       color: white;
@@ -324,13 +326,13 @@
       }
     }
   }
-  .mapapi {
+  .mapbox-wrapper {
     float: right;
-    width: 80%;
-    height: 784px;
-    border-top: 13px solid #055F63;
+    height: 785px;
+    width: 70%;
     #map {
-      position:absolute; top:0; bottom:0; width:100%;
+      float: right;
+      position: relative; top:0; bottom:0; width:100%;
       width: 77.3%;
       height: 100%;
       border-top: 13px solid #055F63;

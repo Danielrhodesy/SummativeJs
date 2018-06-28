@@ -58,6 +58,7 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
 
   // PARTY SIZE
 
+
   var seatsNeeded = $('.ps-input')[0];
 
   $('.ps-plus').click(function psAdd(e){
@@ -85,8 +86,8 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
 
   // HIRE LENGTH
 
-  var daysNeeded = $('.hl-input')[0];
 
+  var daysNeeded = $('.hl-input')[0];
 
   $('.hl-plus').click(function hlPlus(e){
       e.preventDefault();
@@ -109,6 +110,9 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
           $('input[name='+fieldName+']').val(0);
       }
   });
+
+
+// VALIDATION FOR CHOICE
 
 
   function vehiclechoice(vehicle, vehicleDiv, divButton) {
@@ -166,24 +170,6 @@ $('#ph-confirmbutton').on('click', function(){
        // Hiding the direction ui controls
      });
 
-
-   //
-   //      // HILL SHADING
-   //
-   //   map.on('load', function () {
-   //       map.addSource('dem', {
-   //           "type": "raster-dem",
-   //           "url": "mapbox://mapbox.terrain-rgb"
-   //       });
-   //       map.addLayer({
-   //           "id": "hillshading",
-   //           "source": "dem",
-   //           "type": "hillshade"
-   //       // insert below waterway-river-canal-shadow;
-   //       // where hillshading sits in the Mapbox Outdoors style
-   //       }, 'waterway-river-canal-shadow');
-   //   });
-   //
      map.addControl(directions, 'top-left');
 
      directions.on('route', function(direction){
@@ -191,6 +177,7 @@ $('#ph-confirmbutton').on('click', function(){
 
      });
  }();
+
 
 // -------------------
 //   ADDING VALUES
@@ -210,6 +197,7 @@ $('#ph-confirmbutton').on('click', function(){
 
 // APPENDING VEHICLE
 
+
 function vehicleconfirm (vcClicked, image) {
 
   document.getElementById(vcClicked).addEventListener('click', function() {
@@ -222,7 +210,6 @@ function vehicleconfirm (vcClicked, image) {
 
     src.appendChild(createPic);
 
-    console.log('test1');
   });
 };
 
@@ -233,24 +220,26 @@ vehicleconfirm ('smallcar-button', 'images/automobile.png')
 vehicleconfirm ('motorbike-button', 'images/motor-sports.png')
 
 
-// APPENDING PARTY SIZE
+// APPENDING PARTY SIZE & HIRE LENGTH
+
 
 function hlConfirm(value, valuePlace) {
 
   document.getElementById('ph-confirmbutton').addEventListener('click', function() {
     var src = document.getElementById(valuePlace)
-  
+    console.dir(src);
 
-    seatsNeeded.setAttribute('fontsize','70px')
+    seatsNeeded.setAttribute('fontsize','120px')
 
-    src.appendChild(value);
+    src.innerHTML = value;
+
   });
 };
 
-hlConfirm(seatsNeeded, 'yt-partysize')
-hlConfirm(daysNeeded, 'yt-hirelength')
+hlConfirm(seatsNeeded.value, 'yt-partysize')
+hlConfirm(daysNeeded.value, 'yt-hirelength')
 
-
+console.log();
 
 
 
