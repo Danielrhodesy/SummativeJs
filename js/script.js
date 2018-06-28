@@ -127,27 +127,11 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
         document.getElementById(divButton).style.display = "none";
       }
     }
-  //
-  //   if (seatsNeeded >= vehicle.seat[0]
-  //      && seatsNeeded <= vehicle.seat[1]
-  //      && daysNeeded >= vehicle.days[0]
-  //      && daysNeeded <= vehicle.days[1]) {
-  //     console.log('true');
-  //
-  //   } else {
-  //     console.log('false');
-  //     document.getElementById(vehicleDiv).style.opacity = "0.7";
-  //     document.getElementById(divButton).style.display = "none";
-  //   }
-  // }
 
 $('#ph-confirmbutton').on('click', function(){
   console.dir(daysNeeded.value);
   console.dir(seatsNeeded.value)
-  // console.log(seatsNeeded);
-  // console.log(daysNeeded);
-  // console.dir($('.ps-input')[0].value);
-  // console.dir($('.hl-input')[0].value);
+
   vehiclechoice(data.motorhome, 'motorhome-div', 'motorhome-button');
   vehiclechoice(data.largecar, 'largecar-div', 'largecar-button');
   vehiclechoice(data.smallcar, 'smallcar-div', 'smallcar-button');
@@ -214,6 +198,11 @@ $('#ph-confirmbutton').on('click', function(){
 
 
 
+
+
+
+
+
 // -------------------
 //  APPEDNING DETAILS
 // -------------------
@@ -225,14 +214,15 @@ function vehicleconfirm (vcClicked, image) {
 
   document.getElementById(vcClicked).addEventListener('click', function() {
     var src = document.getElementById('yt-vehicle');
-    var creatPic = document.createElement('img');
+    var createPic = document.createElement('img');
 
-    creatPic.setAttribute('src', image);
-    creatPic.setAttribute('height', '160px');
-    creatPic.setAttribute('width', 'auto');
+    createPic.setAttribute('src', image);
+    createPic.setAttribute('height', '160px');
+    createPic.setAttribute('width', 'auto');
 
-    src.appendChild(creatPic);
+    src.appendChild(createPic);
 
+    console.log('test1');
   });
 };
 
@@ -244,12 +234,22 @@ vehicleconfirm ('motorbike-button', 'images/motor-sports.png')
 
 // APPENDING PARTY SIZE
 
-  function hlConfirm() {
+function hlConfirm(value, valuePlace) {
 
-    var createHlValue = document.getElementById('id')
+  document.getElementById('ph-confirmbutton').addEventListener('click', function() {
+    var src = document.getElementById(valuePlace)
+    
 
-  }
+    seatsNeeded.setAttribute('fontsize','70px')
 
+    src.appendChild(value);
+    console.log(src +'what');
+  });
+};
 
+hlConfirm(seatsNeeded, 'yt-partysize')
+hlConfirm(daysNeeded, 'yt-hirelength')
+
+// ENDING BRACKET
 
 });
