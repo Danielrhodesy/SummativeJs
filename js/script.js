@@ -58,6 +58,8 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
 
   // PARTY SIZE
 
+  var seatsNeeded = $('.ps-input')[0];
+
   $('.ps-plus').click(function psAdd(e){
       e.preventDefault();
       fieldName = $(this).attr('field');
@@ -83,6 +85,9 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
 
   // HIRE LENGTH
 
+  var daysNeeded = $('.hl-input')[0];
+
+
   $('.hl-plus').click(function hlPlus(e){
       e.preventDefault();
       fieldName = $(this).attr('field');
@@ -106,18 +111,48 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
   });
 
 
-  function vehiclechoice() {
-      console.log('string');
-    if (currentVal >= obj.seat[0] && currentVal <= obj.seat[1] && hlcurrentVal >= obj.days[0] && hlcurrentVal <= obj.days[0]) {
+  function vehiclechoice(vehicle, vehicleDiv, divButton) {
 
-    } else {
-      document.getElementById('motorhome-div').style.backgroundColor = "grey";
 
+      if (parseInt(seatsNeeded.value) >= vehicle.seat[0]
+         && parseInt(seatsNeeded.value) <= vehicle.seat[1]
+         && parseInt(daysNeeded.value) >= vehicle.days[0]
+         && parseInt(daysNeeded.value) <= vehicle.days[1]) {
+        console.log('true');
+        document.getElementById(vehicleDiv).style.opacity = "1";
+        document.getElementById(divButton).style.display = "inline-block";
+      } else {
+        console.log('false');
+        document.getElementById(vehicleDiv).style.opacity = "0.7";
+        document.getElementById(divButton).style.display = "none";
+      }
     }
-  }
+  //
+  //   if (seatsNeeded >= vehicle.seat[0]
+  //      && seatsNeeded <= vehicle.seat[1]
+  //      && daysNeeded >= vehicle.days[0]
+  //      && daysNeeded <= vehicle.days[1]) {
+  //     console.log('true');
+  //
+  //   } else {
+  //     console.log('false');
+  //     document.getElementById(vehicleDiv).style.opacity = "0.7";
+  //     document.getElementById(divButton).style.display = "none";
+  //   }
+  // }
 
 $('#ph-confirmbutton').on('click', function(){
-  console.log('string');
+  console.dir(daysNeeded.value);
+  console.dir(seatsNeeded.value)
+  // console.log(seatsNeeded);
+  // console.log(daysNeeded);
+  // console.dir($('.ps-input')[0].value);
+  // console.dir($('.hl-input')[0].value);
+  vehiclechoice(data.motorhome, 'motorhome-div', 'motorhome-button');
+  vehiclechoice(data.largecar, 'largecar-div', 'largecar-button');
+  vehiclechoice(data.smallcar, 'smallcar-div', 'smallcar-button');
+  vehiclechoice(data.motorbike, 'motorbike-div', 'motorbike-button')
+
 })
 
 
@@ -127,68 +162,56 @@ $('#ph-confirmbutton').on('click', function(){
 // -------------------
 
 
-(function(){
 
-  var token = 'pk.eyJ1IjoidmVyYXRlY2giLCJhIjoiY2phYmZ1NXFmMHIwMDM1cGV4bHV4bHhzbSJ9.gbT5J_uXxbjRRuj00D7Xeg';
+ var selfInvoke = function(){
 
-  mapboxgl.accessToken = token
+     var token = 'pk.eyJ1IjoidmVyYXRlY2giLCJhIjoiY2phYmZ1NXFmMHIwMDM1cGV4bHV4bHhzbSJ9.gbT5J_uXxbjRRuj00D7Xeg';
 
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [174.77701,-41.28868],
-    zoom: 5
-  });
+     mapboxgl.accessToken = token
 
-  var directions = new MapboxDirections({
-    accessToken: token,
-    unit: 'metric',
-    // Hiding the direction ui controls
-  });
+     var map = new mapboxgl.Map({
+       container: 'map',
+       style: 'mapbox://styles/mapbox/streets-v9',
+       center: [174.77701,-41.28868],
+       zoom: 5
+     });
 
-     // HILL SHADING
+     var directions = new MapboxDirections({
+       accessToken: token,
+       unit: 'metric',
+       // Hiding the direction ui controls
+     });
 
-  map.on('load', function () {
-      map.addSource('dem', {
-          "type": "raster-dem",
-          "url": "mapbox://mapbox.terrain-rgb"
-      });
-      map.addLayer({
-          "id": "hillshading",
-          "source": "dem",
-          "type": "hillshade"
-      // insert below waterway-river-canal-shadow;
-      // where hillshading sits in the Mapbox Outdoors style
-      }, 'waterway-river-canal-shadow');
-  });
 
-  map.addControl(directions, 'top-left');
+   //
+   //      // HILL SHADING
+   //
+   //   map.on('load', function () {
+   //       map.addSource('dem', {
+   //           "type": "raster-dem",
+   //           "url": "mapbox://mapbox.terrain-rgb"
+   //       });
+   //       map.addLayer({
+   //           "id": "hillshading",
+   //           "source": "dem",
+   //           "type": "hillshade"
+   //       // insert below waterway-river-canal-shadow;
+   //       // where hillshading sits in the Mapbox Outdoors style
+   //       }, 'waterway-river-canal-shadow');
+   //   });
+   //
+     map.addControl(directions, 'top-left');
 
-  directions.on('route', function(direction){
-    console.log(directions.route["0"].distance / 1000 + "kms");
+     directions.on('route', function(direction){
+       // console.log(directions.route["0"].distance / 1000 + "kms");
 
-  });
-})();
-
+     });
+ }();
 
 // -------------------
 //   ADDING VALUES
 // -------------------
 
-
-// var partysize = document.getElementsByClassName('ps-input')
-// var hirelength = document.getElementsByClassName('hl-input')
-//
-// function detailsFunction() {
-//
-// // var motorhome = document.getElementsByClassName('motorhome-button')
-// // var largecar = document.getElementsByClassName('largecar-button')
-// // var smallcar = document.getElementsByClassName('smallcar-button')
-// // var motorbike = document.getElementsByClassName('motorbike-button')
-//
-// };
-//
-// console.log(partysize);
 
 
 // -------------------
@@ -217,6 +240,16 @@ vehicleconfirm ('motorhome-button', 'images/caravan.png')
 vehicleconfirm ('largecar-button', 'images/suv.png')
 vehicleconfirm ('smallcar-button', 'images/automobile.png')
 vehicleconfirm ('motorbike-button', 'images/motor-sports.png')
+
+
+// APPENDING PARTY SIZE
+
+  function hlConfirm() {
+
+    var createHlValue = document.getElementById('id')
+
+  }
+
 
 
 });

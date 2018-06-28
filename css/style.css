@@ -14,7 +14,6 @@
       margin-top: 15px; }
 
 #mainpage-div {
-  display: none;
   position: relative;
   width: 50%;
   margin: auto;
@@ -207,6 +206,7 @@
 
 #page4-div {
   display: flex;
+  display: none;
   position: relative;
   transform: translateY(9%);
   height: 785px;

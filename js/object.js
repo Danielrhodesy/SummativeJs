@@ -1,7 +1,7 @@
 var data = {
 
   motorbike: {
-    seat: 1,
+    seat: [1, 1],
     price: 109,
     days: [1, 5],
     fueluse: 3.7
