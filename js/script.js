@@ -235,11 +235,6 @@ function mapConfirm(){
 
   srco.innerHTML = document.getElementById('aa').value;
   srcd.innerHTML = document.getElementById('bb').value;
-
-  srco.setAttribute('fontsize', '30px')
-  srcd.setAttribute('fontsize', '30px')
-  srco.setAttribute('color', 'white')
-  srcd.setAttribute('color', 'white')
 }
 
 $('#sidebar-button').on('click', function() {
@@ -287,30 +282,6 @@ vehicleconfirm ('motorhome-button', 'images/caravan.png')
 vehicleconfirm ('largecar-button', 'images/suv.png')
 vehicleconfirm ('smallcar-button', 'images/automobile.png')
 vehicleconfirm ('motorbike-button', 'images/motor-sports.png')
-
-
-// // APPENDING PARTY SIZE & HIRE LENGTH
-//
-//
-// function hlConfirm(value, valuePlace) {
-//
-//   document.getElementById('sidebar-button').addEventListener('click', function() {
-//     var src = document.getElementById(valuePlace)
-//     console.log(src);
-//
-//     seatsNeeded.setAttribute('fontsize','120px')
-//     daysNeeded.setAttribute('fontsize','120px')
-//     src.innerHTML = value;
-//
-//   });
-// };
-//
-// hlConfirm(seatsNeeded.value, 'yt-partysize')
-// hlConfirm(daysNeeded.value, 'yt-hirelength')
-//
-// console.log(seatsNeeded.value);
-//
-//
 
 
 // APPENDING Map
