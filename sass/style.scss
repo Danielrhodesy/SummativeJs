@@ -2,23 +2,23 @@
 // ABOUT ICON
 // ------------
 
-.about-icon--wrapper {
-  padding: 30px 40px 0px 0px;
-  .about-icon {
-    position: relative;
-    float: right;
-    background-color: #A3D1D8;
-    height: 97px;
-    width: 97px;
-    border-radius: 50%;
-    text-align: center;
-    img {
-      height: 70px;
-      width: 70px;
-      margin-top: 15px;
-    }
-  }
-}
+// .about-icon--wrapper {
+//   padding: 30px 40px 0px 0px;
+//   .about-icon {
+//     position: relative;
+//     float: right;
+//     background-color: #A3D1D8;
+//     height: 97px;
+//     width: 97px;
+//     border-radius: 50%;
+//     text-align: center;
+//     img {
+//       height: 70px;
+//       width: 70px;
+//       margin-top: 15px;
+//     }
+//   }
+// }
 
 // ------------
 //  MAIN PAGE
@@ -68,7 +68,7 @@
 }
 
 // ------------
-//   PAGE 2 (VEHICLE)
+//   PAGE 2 (DETAILS)
 // ------------
 
 #page2-div {
@@ -161,16 +161,18 @@
         .number-plus {
           float: right;
           input {
+            line-height: 20px;
             height: 111px;
             width: 97px;
             border-radius: 0px 75px 75px 0px;
             background-color: #DDC137;
             border: 0px;
-            font-size: 90px;
+            font-size: 120px;
           }
         }
         .number-input {
           input {
+            line-height: 20px;
             width: 117.2px;
             height: 111px;
             text-align: center;
@@ -186,7 +188,7 @@
 }
 
 // ------------
-//  PAGE 3 (TRIP DETAILS)
+//  PAGE 3 (VEHICLE)
 // ------------
 
 #page3-div {
@@ -269,20 +271,23 @@
 // ------------
 
 #page4-div {
-  display: flex;
   display: none;
-  position: relative;
-  transform: translateY(21.4%);
+  // position: relative;
+  transform: translateY(25.2%);
   height: 785px;
-  width: 100%;
+  // width: 800px;
+  // width: 100%;
   background-color: rgba( 163, 209, 216, 0.92);
+  .mapboxgl-ctrl-top-left {
+    display: none;
+  }
   .backbutton {
     position: absolute;
-    height: 0px;
+    height: 40px;
     padding-top: 1%;
     padding-left: 2%;
     .m-backbutton-wrapper {
-      height: 60px;
+      height: 80px;
       width: 60px;
       padding-top: 20px;
       img {
@@ -299,18 +304,41 @@
     border-right: 13px solid;
     border-color: #055F63;
     margin-right: 0px;
-    h2 {
-      font-size: 80;
-      color: white;
-      padding-left: 30%;
+    h3 {
+      font-size: 36px;
       font-weight: bold;
-      padding-top: 3em;
-    }
-    .sidebar-button {
-      position: absolute;
-      bottom: 15%;
-      width: 22%;
+      color: white;
       text-align: center;
+      padding-top: 4em;;
+    }
+    .directions-div {
+      background-color: #055F63;
+      width: 22em;
+      height: 15em;
+      position: absolute;
+      top: 15em;
+      left: 10%;
+      border-radius: 10px;
+      #aa, #bb {
+        display: block;
+        height: 2.5em;
+        margin: 2em;
+        border-radius: 3px;
+        width: 287px;
+      }
+      p {
+        margin: 0px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+      }
+    }
+
+    #sidebar-button {
+      // position: absolute;
+      // width: 22%;
+      text-align: center;
+      padding-top: 360px;
       button {
         border-radius: 3px;
         height: 60px;
@@ -329,11 +357,11 @@
   .mapbox-wrapper {
     float: right;
     height: 785px;
-    width: 70%;
+    width: 90%;
     #map {
       float: right;
       position: relative; top:0; bottom:0; width:100%;
-      width: 77.3%;
+      width: 1477px;
       height: 100%;
       border-top: 13px solid #055F63;
     }
@@ -399,6 +427,14 @@
         }
         h3 {
           color: white;
+        }
+        p {
+          padding-top: 0px;
+          color: white;
+          font-size: 30px;
+        }
+        #to{
+          text-align: center;
         }
       }
     }

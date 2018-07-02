@@ -112,6 +112,20 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
   });
 
 
+  // APPENDING PARTY SIZE & HIRE LENGTH
+
+
+  function hlConfirm(value, valuePlace) {
+
+      var src = document.getElementById(valuePlace)
+      console.log(src);
+
+      seatsNeeded.setAttribute('fontsize','120px')
+      daysNeeded.setAttribute('fontsize','120px')
+      src.innerHTML = value;
+  };
+
+
 // VALIDATION FOR CHOICE
 
 
@@ -134,15 +148,17 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
 
 $('#ph-confirmbutton').on('click', function(){
   console.dir(daysNeeded.value);
-  console.dir(seatsNeeded.value)
+  console.dir(seatsNeeded.value);
 
   vehiclechoice(data.motorhome, 'motorhome-div', 'motorhome-button');
   vehiclechoice(data.largecar, 'largecar-div', 'largecar-button');
   vehiclechoice(data.smallcar, 'smallcar-div', 'smallcar-button');
-  vehiclechoice(data.motorbike, 'motorbike-div', 'motorbike-button')
+  vehiclechoice(data.motorbike, 'motorbike-div', 'motorbike-button');
 
+
+  hlConfirm(seatsNeeded.value, 'yt-partysize')
+  hlConfirm(daysNeeded.value, 'yt-hirelength')
 })
-
 
 
 // -------------------
@@ -167,6 +183,7 @@ $('#ph-confirmbutton').on('click', function(){
      var directions = new MapboxDirections({
        accessToken: token,
        unit: 'metric',
+       profile: 'mapbox/driving'
        // Hiding the direction ui controls
      });
 
@@ -174,10 +191,62 @@ $('#ph-confirmbutton').on('click', function(){
 
      directions.on('route', function(direction){
        // console.log(directions.route["0"].distance / 1000 + "kms");
-
+       console.log(directions);
+       console.dir(directions.route['0'].distance / 1000);
      });
+
+    //Grabbing route from custom inputs
+     document.getElementById('dir').addEventListener('click', setRouteDynamically, false);
+
+     function setRouteDynamically(){
+       var getAA = document.getElementById('aa').value;
+       var getBB = document.getElementById('bb').value;
+       directions.setOrigin(getAA);
+       directions.setDestination(getBB);
+     }
+
+     // function calculateDistance(){
+     //    container = document.querySelector(".mapbox-directions-route-summary");
+     //    if (container == null) {
+     //      alert("Please enter an Origin and Destination");
+     //
+     //    };
+     //    distanceOutput = container.getElementById("h1");
+     //    distanceText = $(distanceOutput).text();
+     //    distance = parseInt(distanceText);
+     //    console.log('test');
+     //  }
+     //
+     //  $('#sidebar-button').on('click', function() {
+     //
+     //    calculateDistance()
+     //
+     //  })
+
  }();
 
+
+ // APPENDING Map
+
+function mapConfirm(){
+
+  var srco = document.getElementById('origin')
+  var srcd = document.getElementById('destination')
+
+  srco.innerHTML = document.getElementById('aa').value;
+  srcd.innerHTML = document.getElementById('bb').value;
+
+  srco.setAttribute('fontsize', '30px')
+  srcd.setAttribute('fontsize', '30px')
+  srco.setAttribute('color', 'white')
+  srcd.setAttribute('color', 'white')
+}
+
+$('#sidebar-button').on('click', function() {
+
+  mapConfirm()
+
+})
 
 // -------------------
 //   ADDING VALUES
@@ -220,27 +289,31 @@ vehicleconfirm ('smallcar-button', 'images/automobile.png')
 vehicleconfirm ('motorbike-button', 'images/motor-sports.png')
 
 
-// APPENDING PARTY SIZE & HIRE LENGTH
+// // APPENDING PARTY SIZE & HIRE LENGTH
+//
+//
+// function hlConfirm(value, valuePlace) {
+//
+//   document.getElementById('sidebar-button').addEventListener('click', function() {
+//     var src = document.getElementById(valuePlace)
+//     console.log(src);
+//
+//     seatsNeeded.setAttribute('fontsize','120px')
+//     daysNeeded.setAttribute('fontsize','120px')
+//     src.innerHTML = value;
+//
+//   });
+// };
+//
+// hlConfirm(seatsNeeded.value, 'yt-partysize')
+// hlConfirm(daysNeeded.value, 'yt-hirelength')
+//
+// console.log(seatsNeeded.value);
+//
+//
 
 
-function hlConfirm(value, valuePlace) {
-
-  document.getElementById('ph-confirmbutton').addEventListener('click', function() {
-    var src = document.getElementById(valuePlace)
-    console.dir(src);
-
-    seatsNeeded.setAttribute('fontsize','120px')
-
-    src.innerHTML = value;
-
-  });
-};
-
-hlConfirm(seatsNeeded.value, 'yt-partysize')
-hlConfirm(daysNeeded.value, 'yt-hirelength')
-
-console.log();
-
+// APPENDING Map
 
 
 
