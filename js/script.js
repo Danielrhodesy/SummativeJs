@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 
+
 // -------------------
 // Fade in start up main-page
 // -------------------
@@ -118,7 +119,6 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
   function hlConfirm(value, valuePlace) {
 
       var src = document.getElementById(valuePlace)
-      console.log(src);
 
       seatsNeeded.setAttribute('fontsize','120px')
       daysNeeded.setAttribute('fontsize','120px')
@@ -136,19 +136,15 @@ backAnimsitionCode ('.c-backbutton-wrapper', '#page5-div', '#page5-div', '#page4
          && parseInt(seatsNeeded.value) <= vehicle.seat[1]
          && parseInt(daysNeeded.value) >= vehicle.days[0]
          && parseInt(daysNeeded.value) <= vehicle.days[1]) {
-        console.log('true');
         document.getElementById(vehicleDiv).style.opacity = "1";
         document.getElementById(divButton).style.display = "inline-block";
       } else {
-        console.log('false');
         document.getElementById(vehicleDiv).style.opacity = "0.7";
         document.getElementById(divButton).style.display = "none";
       }
     }
 
 $('#ph-confirmbutton').on('click', function(){
-  console.dir(daysNeeded.value);
-  console.dir(seatsNeeded.value);
 
   vehiclechoice(data.motorhome, 'motorhome-div', 'motorhome-button');
   vehiclechoice(data.largecar, 'largecar-div', 'largecar-button');
@@ -160,14 +156,14 @@ $('#ph-confirmbutton').on('click', function(){
   hlConfirm(daysNeeded.value, 'yt-hirelength')
 })
 
-
 // -------------------
 //      MAP API
 // -------------------
 
+var traveldistance;
 
 
- var selfInvoke = function(){
+var selfInvoke = function(){
 
      var token = 'pk.eyJ1IjoidmVyYXRlY2giLCJhIjoiY2phYmZ1NXFmMHIwMDM1cGV4bHV4bHhzbSJ9.gbT5J_uXxbjRRuj00D7Xeg';
 
@@ -188,11 +184,15 @@ $('#ph-confirmbutton').on('click', function(){
      });
 
      map.addControl(directions, 'top-left');
-
+     // console.dir(direction);
      directions.on('route', function(direction){
-       // console.log(directions.route["0"].distance / 1000 + "kms");
-       console.log(directions);
-       console.dir(directions.route['0'].distance / 1000);
+      console.log('working');
+      // console.log(directions.route["0"].distance / 1000 + "kms");
+      console.log(direction);
+
+      traveldistance = direction.route["0"].distance / 1000 + "kms"
+
+      console.log(traveldistance);
      });
 
     //Grabbing route from custom inputs
@@ -226,32 +226,102 @@ $('#ph-confirmbutton').on('click', function(){
  }();
 
 
- // APPENDING Map
-
-function mapConfirm(){
-
-  var srco = document.getElementById('origin')
-  var srcd = document.getElementById('destination')
-
-  srco.innerHTML = document.getElementById('aa').value;
-  srcd.innerHTML = document.getElementById('bb').value;
-}
-
-$('#sidebar-button').on('click', function() {
-
-  mapConfirm()
-
-})
-
 // -------------------
 //   ADDING VALUES
 // -------------------
 
 
+var motorhomeValue = document.getElementById('motorhome-button')
+var largecarValue = document.getElementById('largecar-button')
+var smallcarValue = document.getElementById('smallcar-button')
+var motorbikeValue = document.getElementById('motorbike-button')
 
 
+// GIVING VEHICLES VALUES
+
+function giveValues(){
+
+  motorhomeValue.setAttribute('value', 200)
+  largecarValue.setAttribute('value', 144)
+  smallcarValue.setAttribute('value', 129)
+  motorbikeValue.setAttribute('value', 109)
+
+};
+
+giveValues()
 
 
+// CALCULATING HIRE COST
+
+var hirecostvalue;
+
+function hireCost(vehicleValue) {
+
+  hirecostvalue = daysNeeded.value * vehicleValue
+  // var fuelcost = vehicleFuelcost * traveldistance
+
+  console.log(hirecostvalue);
+
+};
+
+$('#motorhome-button').on('click', function() {
+  hireCost(motorhomeValue.value)
+})
+
+$('#largecar-button').on('click', function() {
+  hireCost(largecarValue.value)
+})
+
+$('#smallcar-button').on('click', function() {
+  hireCost(smallcarValue.value)
+})
+
+$('#motorbike-button').on('click', function() {
+  hireCost(motorbikeValue.value)
+})
+
+var vehicleFuelcost
+
+function fuelValue(vfuelcost) {
+
+  vehicleFuelcost = vfuelcost
+
+}
+
+$('#motorhome-button').on('click', function() {
+  fuelCost(0.425)
+})
+
+$('#largecar-button').on('click', function() {
+  fuelCost(0.242)
+})
+
+$('#smallcar-button').on('click', function() {
+  fuelCost(0.212)
+})
+
+$('#motorbike-button').on('click', function() {
+  fuelCost(0.092)
+})
+
+
+// CALCULATING FUEL COSTS
+
+var fuelcostvalue
+
+function fuelCost(){
+
+  fuelcostvalue = vehicleFuelcost * traveldistance
+
+
+  console.log(traveldistance);
+}
+
+$('#sidebar-button').on('click', function(){
+
+  fuelCost()
+
+})
 
 
 // -------------------
@@ -285,6 +355,39 @@ vehicleconfirm ('motorbike-button', 'images/motor-sports.png')
 
 
 // APPENDING Map
+
+function mapConfirm(){
+
+ var srco = document.getElementById('origin')
+ var srcd = document.getElementById('destination')
+
+ srco.innerHTML = document.getElementById('aa').value;
+ srcd.innerHTML = document.getElementById('bb').value;
+}
+
+$('#sidebar-button').on('click', function() {
+
+ mapConfirm()
+
+})
+
+// Cost Confirm
+
+function costConfirm(){
+
+  var srca = document.getElementById('hireCost')
+  var srcb = document.getElementById('fuelCost')
+
+  srca.innerHTML = hirecostvalue
+  srcb.innerHTML = fuelcostvalue
+
+}
+
+$('#sidebar-button').on('click', function(){
+
+  costConfirm()
+
+})
 
 
 

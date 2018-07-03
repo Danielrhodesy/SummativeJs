@@ -259,8 +259,7 @@
           padding-top: 3px; }
   #page4-div .mapbox-wrapper {
     float: right;
-    height: 785px;
-    width: 90%; }
+    height: 785px; }
     #page4-div .mapbox-wrapper #map {
       float: right;
       position: relative;
