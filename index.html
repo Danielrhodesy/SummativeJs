@@ -23,12 +23,6 @@
         <img src="images/nzback.jpg" alt="Background Image">
       </div>
 
-      <!-- <div class="about-icon-wrapper">
-        <div class="about-icon">
-          <img src="images/question.png" alt="About Icon">
-        </div>
-      </div> -->
-
   <!-- MAIN PAGE -->
 
       <div id="animsition-mainpage">
@@ -47,11 +41,11 @@
 <!-- PAGE 2 (DETAILS) -->
 
       <div id="page2-div">
-        <div class="backbutton ph-backbutton">
+        <!-- <div class="backbutton ph-backbutton">
           <div class="ph-backbutton-wrapper">
             <img src="images/backbutton.png" alt="Back Button">
           </div>
-        </div>
+        </div> -->
         <h1>Party Size & Hire Length</h1>
         <div class="master-container--ph">
           <div class="phsingle-container ps-container">
@@ -93,7 +87,7 @@
       <div id="page3-div">
         <div class="backbutton v-backbutton">
           <div class="v-backbutton-wrapper">
-            <img src="images/backbutton.png" alt="Back Button">
+            <p>Change Details</p>
           </div>
         </div>
         <h1>Which Vehicle</h1>
@@ -156,11 +150,6 @@
   <!-- PAGE 4 (MAP) -->
 
       <div id="page4-div">
-        <div class="backbutton m-backbutton">
-          <div class="m-backbutton-wrapper">
-            <img src="images/backbutton.png" alt="Back Button">
-          </div>
-        </div>
         <div class="sidebar">
           <div class="sidebar-cost">
             <h3>Select your Destination</h3>
@@ -172,14 +161,17 @@
                 <p>To</p>
                 <input type="text" id="bb" placeholder="DESTINATION">
               </form>
+
+          <div id="searchbutton">
+            <p>Search</p>
+          </div>
             </div>
             <div id="sidebar-button">
               <button class="m-button" type="button" name="button"><p>Confirm</p></button>
             </div>
           </div>
         </div>
-        <div class="mapbox-wrapper">
-          <div class="mapapi mapboxgl-map" id='map'>
+        <div id="mapbox-wrapper">
 
           </div>
         </div>
@@ -188,11 +180,6 @@
   <!-- PAGE 5 (CONFIRM) -->
 
       <div id="page5-div">
-        <div class="backbutton c-backbutton">
-          <div class="c-backbutton-wrapper">
-            <img src="images/backbutton.png" alt="Back Button">
-          </div>
-        </div>
         <h1>Confirm</h1>
         <div class="main-container--c">
           <h2>Your Trip:</h2>
@@ -227,8 +214,15 @@
 
             </div>
           </div>
-          <div class="button-wrapper">
-            <button type="button" name="button"><p>Confirm</p></button>
+          <div class="button-wrappers">
+            <div class="rbutton-wrapper">
+              <div id="restart-button">
+                <a href="index.html"><p>Restart</p></a>
+              </div>
+            </div>
+            <div class="button-wrapper">
+              <button type="button" name="button"><p>Confirm</p></button>
+            </div>
           </div>
         </div>
       </div>

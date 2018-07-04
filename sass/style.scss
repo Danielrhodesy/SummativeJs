@@ -208,12 +208,15 @@
     height: 0px;
     padding-left: 2%;
     .v-backbutton-wrapper {
-      height: 60px;
-      width: 60px;
-      padding-top: 20px;
-      img {
-        height: 60px;
-        width: auto;
+      text-align: center;
+      height: 50px;
+      width: 150px;
+      padding-top: 9px;
+      background-color: #e74c3c;
+      border-radius: 5px;
+      p {
+        color: white;
+        font-size: 22px;
       }
     }
   }
@@ -314,7 +317,7 @@
     .directions-div {
       background-color: #055F63;
       width: 22em;
-      height: 15em;
+      height: 19.3em;
       position: absolute;
       top: 15em;
       left: 10%;
@@ -332,13 +335,27 @@
         text-align: center;
         color: white;
       }
+      #searchbutton {
+
+        background-color: #DDC137;
+        text-align: center;
+        height: 45px;
+        width: 70px;
+        margin-left: 140px;
+        border-radius: 5px;
+        p{
+          color: black;
+          padding-top: 5px;
+        }
+      }
     }
 
     #sidebar-button {
+      display: none;
       // position: absolute;
       // width: 22%;
       text-align: center;
-      padding-top: 360px;
+      padding-top: 400px;
       button {
         border-radius: 3px;
         height: 60px;
@@ -354,17 +371,18 @@
       }
     }
   }
-  .mapbox-wrapper {
-    float: right;
-    height: 785px;
-    #map {
-      float: right;
-      position: relative; top:0; bottom:0; width:100%;
-      width: 1477px;
-      height: 100%;
-      border-top: 13px solid #055F63;
-    }
-  }
+// .mapbox-wrapper {
+//     float: right;
+//     height: 785px;
+//     #map {
+//       float: right;
+//       position: relative; top:0; bottom:0; width:100%;
+//       width: 1477px;
+//       height: 100%;
+//       border-top: 13px solid #055F63;
+//     }
+//  }
+
 }
 
 // ------------
@@ -437,20 +455,46 @@
         }
       }
     }
-    .button-wrapper{
-      text-align: center;
-      padding-top: 3em;
-      button {
-        border-radius: 3px;
-        height: 60px;
-        width: 240px;
-        color: grey;
-        background-color: #DDC137;
+    .button-wrappers {
+      display: flex;
+      flex-direction: row;
+      padding-top: 2em;
+      padding-left: 2em;
+      .button-wrapper{
         text-align: center;
-        p {
-          color: black;
-          font-size: 30px;
-          padding-top: 3px;
+        width: 1500px;
+        button {
+          border-radius: 3px;
+          height: 60px;
+          width: 240px;
+          color: grey;
+          background-color: #DDC137;
+          text-align: center;
+          p {
+            color: black;
+            font-size: 30px;
+            padding-top: 3px;
+          }
+        }
+      }
+      .rbutton-wrapper{
+        width: 200px;
+        #restart-button {
+          border-radius: 3px;
+          height: 60px;
+          width: 160px;
+          color: grey;
+          background-color: #e74c3c;
+          text-align: center;
+          a {
+            text-decoration: none;
+
+            p {
+              color: black;
+              font-size: 30px;
+              padding-top: 3px;
+            }
+          }
         }
       }
     }

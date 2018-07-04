@@ -163,7 +163,19 @@ $('#ph-confirmbutton').on('click', function(){
 var traveldistance;
 
 
-var selfInvoke = function(){
+function createMap(){
+
+    mapWrapper = document.getElementById('mapbox-wrapper')
+    mapContainer = document.createElement('div')
+    mapContainer.style.width = '1470px'
+    mapContainer.style.height = '784px'
+    mapContainer.style.position = 'relative'
+    mapContainer.style.float = 'right'
+    mapContainer.setAttribute('id', 'map')
+
+    mapWrapper.appendChild(mapContainer)
+
+    console.log('test');
 
      var token = 'pk.eyJ1IjoidmVyYXRlY2giLCJhIjoiY2phYmZ1NXFmMHIwMDM1cGV4bHV4bHhzbSJ9.gbT5J_uXxbjRRuj00D7Xeg';
 
@@ -190,7 +202,7 @@ var selfInvoke = function(){
       // console.log(directions.route["0"].distance / 1000 + "kms");
       console.log(direction);
 
-      traveldistance = direction.route["0"].distance / 1000 + "kms"
+      traveldistance = (Math.ceil(direction.route["0"].distance / 1000))
 
       console.log(traveldistance);
      });
@@ -223,8 +235,30 @@ var selfInvoke = function(){
      //
      //  })
 
- }();
+ };
 
+
+$('#searchbutton').on('click', function(){
+
+  $('#sidebar-button').fadeIn();
+
+})
+
+
+vbuttonFunc('#motorhome-button')
+vbuttonFunc('#largecar-button')
+vbuttonFunc('#smallcar-button')
+vbuttonFunc('#motorbike-button')
+
+function vbuttonFunc(buttonname){
+
+$(buttonname).on('click', function(){
+
+  createMap()
+
+})
+
+}
 
 // -------------------
 //   ADDING VALUES
@@ -258,7 +292,6 @@ var hirecostvalue;
 function hireCost(vehicleValue) {
 
   hirecostvalue = daysNeeded.value * vehicleValue
-  // var fuelcost = vehicleFuelcost * traveldistance
 
   console.log(hirecostvalue);
 
@@ -280,40 +313,47 @@ $('#motorbike-button').on('click', function() {
   hireCost(motorbikeValue.value)
 })
 
+
+
+
 var vehicleFuelcost
 
 function fuelValue(vfuelcost) {
 
   vehicleFuelcost = vfuelcost
 
+  console.log(vehicleFuelcost);
+
 }
 
-$('#motorhome-button').on('click', function() {
-  fuelCost(0.425)
-})
 
-$('#largecar-button').on('click', function() {
-  fuelCost(0.242)
-})
+jqFunction('#motorbike-button', 0.092)
+jqFunction('#smallcar-button', 0.212)
+jqFunction('#largecar-button', 0.242)
+jqFunction('#motorhome-button', 0.425)
 
-$('#smallcar-button').on('click', function() {
-  fuelCost(0.212)
-})
-
-$('#motorbike-button').on('click', function() {
-  fuelCost(0.092)
-})
+function jqFunction(vehicleBtn, vfuelcost){
+  $(vehicleBtn).on('click', function() {
+    fuelValue(vfuelcost)
+  })
+}
 
 
 // CALCULATING FUEL COSTS
 
 var fuelcostvalue
 
+var rfuelcostvalue
+
 function fuelCost(){
 
   fuelcostvalue = vehicleFuelcost * traveldistance
 
+  rfuelcostvalue = Math.ceil(fuelcostvalue)
 
+  console.log(fuelcostvalue);
+
+  console.log(vehicleFuelcost);
   console.log(traveldistance);
 }
 
@@ -378,8 +418,8 @@ function costConfirm(){
   var srca = document.getElementById('hireCost')
   var srcb = document.getElementById('fuelCost')
 
-  srca.innerHTML = hirecostvalue
-  srcb.innerHTML = fuelcostvalue
+  srca.innerHTML = '$' + hirecostvalue
+  srcb.innerHTML = '$' + rfuelcostvalue
 
 }
 
