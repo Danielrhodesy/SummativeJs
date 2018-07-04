@@ -101,16 +101,19 @@
         #page2-div .master-container--ph .phsingle-container .number-container .number-minus {
           float: left; }
           #page2-div .master-container--ph .phsingle-container .number-container .number-minus input {
+            color: #055F63;
+            line-height: 100px;
             height: 111px;
             width: 97px;
             border-radius: 75px 0px 0px 75px;
             background-color: #DDC137;
             border: 0px;
-            font-size: 90px; }
+            font-size: 120px; }
         #page2-div .master-container--ph .phsingle-container .number-container .number-plus {
           float: right; }
           #page2-div .master-container--ph .phsingle-container .number-container .number-plus input {
-            line-height: 20px;
+            color: #055F63;
+            line-height: 100px;
             height: 111px;
             width: 97px;
             border-radius: 0px 75px 75px 0px;
