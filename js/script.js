@@ -216,25 +216,6 @@ function createMap(){
        directions.setOrigin(getAA);
        directions.setDestination(getBB);
      }
-
-     // function calculateDistance(){
-     //    container = document.querySelector(".mapbox-directions-route-summary");
-     //    if (container == null) {
-     //      alert("Please enter an Origin and Destination");
-     //
-     //    };
-     //    distanceOutput = container.getElementById("h1");
-     //    distanceText = $(distanceOutput).text();
-     //    distance = parseInt(distanceText);
-     //    console.log('test');
-     //  }
-     //
-     //  $('#sidebar-button').on('click', function() {
-     //
-     //    calculateDistance()
-     //
-     //  })
-
  };
 
 
