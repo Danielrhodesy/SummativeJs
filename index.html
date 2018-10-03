@@ -6,7 +6,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Questrial|Signika|Sunflower:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7CQuestrial%7CSignika%7CSunflower:300" rel="stylesheet">
     <!-- Animsition -->
     <link rel="stylesheet" href="animsition/animsition.css">
     <!-- Style Sheet -->
@@ -21,12 +21,6 @@
 
       <div class="background-img">
         <img src="images/nzback.jpg" alt="Background Image">
-      </div>
-
-      <div class="about-icon--wrapper">
-        <div class="about-icon">
-          <img src="images/question.png" alt="About Icon">
-        </div>
       </div>
 
   <!-- MAIN PAGE -->
@@ -44,92 +38,22 @@
         </div>
       </div>
 
-<!-- PAGE 2 (Vehicle CHOICE) -->
+<!-- PAGE 2 (DETAILS) -->
 
       <div id="page2-div">
-        <div class="backbutton v-backbutton">
-          <div class="v-backbutton-wrapper">
-            <img src="images/backbutton.png" alt="Back Button">
-          </div>
-        </div>
-        <h1>Which Vehicle</h1>
-        <div class="master-contanier--v">
-          <div class="single-container motorhome">
-            <div class="image-wrapper">
-              <img src="images/caravan.png" alt="MotorHome">
-            </div>
-            <p>Party Size: 2-6 p</p>
-            <br>
-            <p>Length of Hire: 2-15 days</p>
-            <br>
-            <p>Fueluse: $17 perH</p>
-            <div class="button-wrapper">
-              <button class="v-button" type="button" name="button">$200</button>
-            </div>
-          </div>
-          <div class="single-container largecar">
-            <div class="image-wrapper">
-              <img src="images/suv.png" alt="Large Car">
-            </div>
-            <p>Party Size: 1-5 p</p>
-            <br>
-            <p>Length of  Hire: 3-10 days</p>
-            <br>
-            <p>Fueluse: $9.7 perH</p>
-            <div class="button-wrapper">
-              <button class="v-button" type="button" name="button">$144</button>
-            </div>
-          </div>
-          <div class="single-container smallcar">
-            <div class="image-wrapper">
-              <img src="images/automobile.png" alt="Small Car">
-            </div>
-            <p>Party Size: 1-2 p</p>
-            <br>
-            <p>Length of Hire: 1-10 days</p>
-            <br>
-            <p>Fueluse: $8.5 perH</p>
-            <div class="button-wrapper">
-              <button class="v-button" type="button" name="button">$129</button>
-            </div>
-          </div>
-          <div class="single-container bike">
-            <div class="image-wrapper">
-              <img src="images/motor-sports.png" alt="Motor Bike">
-            </div>
-            <p>Party Size: 1 p</p>
-            <br>
-            <p>Length of Hire: 1-5 days</p>
-            <br>
-            <p>Fueluse: $3.7 perH</p>
-            <div class="button-wrapper">
-              <button class="v-button" type="button" name="button">$109</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-<!-- PAGE 3 (DETAILS) -->
-
-      <div id="page3-div">
-        <div class="backbutton ph-backbutton">
-          <div class="ph-backbutton-wrapper">
-            <img src="images/backbutton.png" alt="Back Button">
-          </div>
-        </div>
         <h1>Party Size & Hire Length</h1>
         <div class="master-container--ph">
           <div class="phsingle-container ps-container">
             <h2>Party Size (Persons)</h2>
             <div class="number-container">
               <div class="number-minus">
-                <input type='button' value='-' class='ps-minus' field='ps-quantity' />
+                <input type='button' value='-' class='ps-minus' field='ps-quantity'>
               </div>
               <div class="number-plus">
-                <input type='button' value='+' class='ps-plus' field='ps-quantity' />
+                <input type='button' value='+' class='ps-plus' field='ps-quantity'>
               </div>
               <div class="number-input">
-                <input type='text' name='ps-quantity' value='0' class='ps-qty' />
+                <input class='ps-input ps-qty' type='text' name='ps-quantity' value='1'>
               </div>
             </div>
           </div>
@@ -137,88 +61,170 @@
             <h2>Hire Length (Days)</h2>
             <div class="number-container">
               <div class="number-minus">
-                <input type='button' value='-' class='hl-minus' field='hl-quantity' />
+                <input type='button' value='-' class='hl-minus' field='hl-quantity'>
               </div>
               <div class="number-plus">
-                <input type='button' value='+' class='hl-plus' field='hl-quantity' />
+                <input type='button' value='+' class='hl-plus' field='hl-quantity'>
               </div>
               <div class="number-input">
-                <input type='text' name='hl-quantity' value='0' class='hl-qty' />
+                <input class='hl-input hl-qty' type='text' name='hl-quantity' value='1'>
               </div>
             </div>
           </div>
         </div>
-        <div class="ph-confirmbutton">
+        <div id="ph-confirmbutton">
           <button class="ph-button" type="button" name="button"><p>Confirm</p></button>
+        </div>
+      </div>
+
+<!-- PAGE 3 (Vehicle CHOICE) -->
+
+      <div id="page3-div">
+        <div class="backbutton v-backbutton">
+          <div class="v-backbutton-wrapper">
+            <p>Change Details</p>
+          </div>
+        </div>
+        <h1>Which Vehicle</h1>
+        <div class="master-contanier--v">
+          <div class="single-container motorhome" id="motorhome-div">
+            <div class="image-wrapper">
+              <img src="images/caravan.png" alt="MotorHome">
+            </div>
+            <p>Party Size: 2-6 p</p>
+            <br>
+            <p>Length of Hire: 2-15 days</p>
+            <br>
+            <p>Fueluse: $17 per100k</p>
+            <div class="button-wrapper">
+              <button class="v-button"  id="motorhome-button" type="button" name="button">$200</button>
+            </div>
+          </div>
+          <div class="single-container largecar" id="largecar-div">
+            <div class="image-wrapper">
+              <img src="images/suv.png" alt="Large Car">
+            </div>
+            <p>Party Size: 1-5 p</p>
+            <br>
+            <p>Length of  Hire: 3-10 days</p>
+            <br>
+            <p>Fueluse: $9.7 per100k</p>
+            <div class="button-wrapper">
+              <button class="v-button" id="largecar-button" type="button" name="button">$144</button>
+            </div>
+          </div>
+          <div class="single-container smallcar" id="smallcar-div">
+            <div class="image-wrapper">
+              <img src="images/automobile.png" alt="Small Car">
+            </div>
+            <p>Party Size: 1-2 p</p>
+            <br>
+            <p>Length of Hire: 1-10 days</p>
+            <br>
+            <p>Fueluse: $8.5 per100k</p>
+            <div class="button-wrapper">
+              <button class="v-button" id="smallcar-button" type="button" name="button">$129</button>
+            </div>
+          </div>
+          <div class="single-container bike" id="motorbike-div">
+            <div class="image-wrapper">
+              <img src="images/motor-sports.png" alt="Motor Bike">
+            </div>
+            <p>Party Size: 1 p</p>
+            <br>
+            <p>Length of Hire: 1-5 days</p>
+            <br>
+            <p>Fueluse: $3.7 per100k</p>
+            <div class="button-wrapper">
+              <button class="v-button" id="motorbike-button" type="button" name="button">$109</button>
+            </div>
+          </div>
         </div>
       </div>
 
   <!-- PAGE 4 (MAP) -->
 
       <div id="page4-div">
-        <div class="backbutton m-backbutton">
-          <div class="m-backbutton-wrapper">
-            <img src="images/backbutton.png" alt="Back Button">
-          </div>
-        </div>
         <div class="sidebar">
           <div class="sidebar-cost">
-            <h2>Fuel Cost:</h2>
-            <div class="sidebar-button">
+            <h3>Select your Destination</h3>
+            <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.js'></script>
+            <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.css' type='text/css' />
+            <div class="directions-div" id="dir">
+              <form>
+                <input type="text" id="aa" placeholder="ORIGIN">
+                <p>To</p>
+                <input type="text" id="bb" placeholder="DESTINATION">
+              </form>
+
+          <div id="searchbutton">
+            <p>Search</p>
+          </div>
+            </div>
+            <div id="sidebar-button">
               <button class="m-button" type="button" name="button"><p>Confirm</p></button>
             </div>
           </div>
         </div>
-        <div class="mapapi">
-          <div id='map'>
-
-          </div>
+        <div id="mapbox-wrapper">
         </div>
       </div>
 
   <!-- PAGE 5 (CONFIRM) -->
 
       <div id="page5-div">
-        <div class="backbutton c-backbutton">
-          <div class="c-backbutton-wrapper">
-            <img src="images/backbutton.png" alt="Back Button">
-          </div>
-        </div>
         <h1>Confirm</h1>
         <div class="main-container--c">
           <h2>Your Trip:</h2>
           <div class="main-container--c--wrapper">
-            <div class="yt-container yt-vehicle">
+            <div class="yt-container" id="yt-vehicle">
               <h4>Vehicle:</h4>
+              <br>
             </div>
-            <div class="yt-container yt-partysize">
+            <div class="yt-container" >
               <h4>Party Size:</h4>
-
+              <br>
+              <h1 id="yt-partysize"></h1>
             </div>
-            <div class="yt-container yt-hirelength">
+            <div class="yt-container" >
               <h4>Hire Length:</h4>
-
+              <br>
+              <h1 id="yt-hirelength"></h1>
             </div>
             <div class="yt-container yt-destination">
               <h4>Destination:</h4>
+              <br>
+              <p id="origin"></p>
+              <p id="To">to</p>
+              <p id="destination"></p>
 
             </div>
-            <div class="yt-container yt-cost">
-              <h3>Cost:</h3>
+            <div class="yt-container" id="yt-cost">
+              <h3>Costs:</h3>
+              <br>
+              <p>Hire Cost:<p id="hireCost"></p></p>
+              <p>Fuel Cost:<p id="fuelCost"></p></p>
 
             </div>
           </div>
-          <div class="button-wrapper">
-            <button type="button" name="button"><p>Confirm</p></button>
+          <div class="button-wrappers">
+            <div class="rbutton-wrapper">
+              <div id="restart-button">
+                <a href="index.html"><p>Restart</p></a>
+              </div>
+            </div>
+            <div class="button-wrapper">
+              <button type="button" name="button"><a href="index.html"><p>Confirm</p></a></button>
+            </div>
           </div>
         </div>
       </div>
 
     <!-- JAVASCRIPT LINKS -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.js'></script>
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.css' type='text/css' />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="animsition/animsition.js"></script>
+    <script src="js/object.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
