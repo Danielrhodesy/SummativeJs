@@ -56,16 +56,19 @@
     text-align: center;
     padding-top: 4.5em; }
     #page2-div #ph-confirmbutton button {
-      border-radius: 3px;
+      border: #DDC137 3px solid;
+      border-radius: 50px;
       height: 60px;
       width: 240px;
       color: grey;
-      background-color: #DDC137;
+      background-color: #A3D1D8;
       text-align: center; }
       #page2-div #ph-confirmbutton button p {
-        color: black;
+        color: white;
         font-size: 30px;
         padding-top: 3px; }
+    #page2-div #ph-confirmbutton button:hover {
+      background-color: #DDC137; }
   #page2-div h1 {
     text-align: center;
     font-size: 84px;
@@ -190,10 +193,13 @@
       #page3-div .master-contanier--v .single-container .button-wrapper {
         text-align: center; }
         #page3-div .master-contanier--v .single-container .button-wrapper button {
-          border-radius: 3px;
+          border-radius: 50px;
+          border: #DDC137 2px solid;
           height: 40px;
           width: 60px;
-          color: black;
+          color: white;
+          background-color: #055F63; }
+        #page3-div .master-contanier--v .single-container .button-wrapper button:hover {
           background-color: #DDC137; }
 
 #page4-div {
@@ -249,30 +255,45 @@
         text-align: center;
         color: white; }
       #page4-div .sidebar .directions-div #searchbutton {
-        background-color: #DDC137;
+        border-radius: 50px;
+        border: #DDC137 3px solid;
+        background-color: #055F63;
         text-align: center;
         height: 45px;
-        width: 70px;
-        margin-left: 140px;
-        border-radius: 5px; }
+        width: 100px;
+        margin-left: 119px; }
         #page4-div .sidebar .directions-div #searchbutton p {
-          color: black;
+          color: white;
           padding-top: 5px; }
+      #page4-div .sidebar .directions-div #searchbutton:hover {
+        background-color: #DDC137; }
     #page4-div .sidebar #sidebar-button {
       display: none;
       text-align: center;
       padding-top: 400px; }
       #page4-div .sidebar #sidebar-button button {
-        border-radius: 3px;
+        border: #DDC137 3px solid;
+        border-radius: 50px;
         height: 60px;
         width: 240px;
         color: grey;
-        background-color: #DDC137;
+        background-color: rgba(163, 209, 216, 0.92);
         text-align: center; }
         #page4-div .sidebar #sidebar-button button p {
-          color: black;
+          color: white;
           font-size: 30px;
           padding-top: 3px; }
+      #page4-div .sidebar #sidebar-button button:hover {
+        background-color: #DDC137; }
+  #page4-div #mapbox-wrapper {
+    float: right;
+    height: 785px;
+    width: 78.6%; }
+    #page4-div #mapbox-wrapper #map {
+      width: 1600px; }
+      #page4-div #mapbox-wrapper #map .mapboxgl-canvas {
+        width: 100%;
+        height: 100%; }
 
 #page5-div {
   display: none;
@@ -335,31 +356,39 @@
         text-align: center;
         width: 1500px; }
         #page5-div .main-container--c .button-wrappers .button-wrapper button {
-          border-radius: 3px;
+          border: #DDC137 3px solid;
+          border-radius: 50px;
           height: 60px;
           width: 240px;
           color: grey;
-          background-color: #DDC137;
+          background-color: #055F63;
           text-align: center; }
-          #page5-div .main-container--c .button-wrappers .button-wrapper button p {
-            color: black;
-            font-size: 30px;
-            padding-top: 3px; }
+          #page5-div .main-container--c .button-wrappers .button-wrapper button a {
+            text-decoration: none; }
+            #page5-div .main-container--c .button-wrappers .button-wrapper button a p {
+              color: white;
+              font-size: 30px;
+              padding-top: 3px; }
+        #page5-div .main-container--c .button-wrappers .button-wrapper button:hover {
+          background-color: #DDC137; }
       #page5-div .main-container--c .button-wrappers .rbutton-wrapper {
         width: 200px; }
         #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button {
-          border-radius: 3px;
+          border: #e74c3c 3px solid;
+          border-radius: 50px;
           height: 60px;
           width: 160px;
           color: grey;
-          background-color: #e74c3c;
+          background-color: #055F63;
           text-align: center; }
           #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button a {
             text-decoration: none; }
             #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button a p {
-              color: black;
+              color: white;
               font-size: 30px;
               padding-top: 3px; }
+        #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button:hover {
+          background-color: #e74c3c; }
 
 .background-img {
   position: absolute; }

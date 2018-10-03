@@ -19,7 +19,11 @@ $('#animsition-mainpage').animsition();
     $(clicked).click(function(){
       $(divA).fadeOut(function(){
         $(divB).hide(function(){
-          $(divC).fadeIn();
+          $(divC).fadeIn(400, function(){
+
+          createMap()
+
+          });
         });
       });
     });
@@ -27,8 +31,30 @@ $('#animsition-mainpage').animsition();
 
 animsitionCode('.here-button', '#mainpage-div', '#mainpage-div', '#page2-div')
 animsitionCode('.ph-button', '#page2-div', '#page2-div', '#page3-div')
-animsitionCode('.v-button', '#page3-div', '#page3-div', '#page4-div')
 animsitionCode('.m-button', '#page4-div', '#page4-div', '#page5-div')
+
+//FOR MAPCREATE
+
+function animsitionMap (buttonName) {
+  $(buttonName).click(function(){
+    $('#page3-div').fadeOut(function(){
+      $('#page3-div').hide(function(){
+        $('#page4-div').fadeIn(400, function(){
+
+          createMap()
+
+        });
+      });
+    });
+  });
+};
+
+animsitionMap('#motorhome-button')
+animsitionMap('#largecar-button')
+animsitionMap('#smallcar-button')
+animsitionMap('#motorbike-button')
+
+animsitionMap()
 
 
 // -------------------
@@ -167,15 +193,14 @@ function createMap(){
 
     mapWrapper = document.getElementById('mapbox-wrapper')
     mapContainer = document.createElement('div')
-    mapContainer.style.width = '1470px'
-    mapContainer.style.height = '784px'
+    mapContainer.style.width = '97.3%'
+    mapContainer.style.height = '100%'
     mapContainer.style.position = 'relative'
     mapContainer.style.float = 'right'
     mapContainer.setAttribute('id', 'map')
 
     mapWrapper.appendChild(mapContainer)
 
-    console.log('test');
 
      var token = 'pk.eyJ1IjoidmVyYXRlY2giLCJhIjoiY2phYmZ1NXFmMHIwMDM1cGV4bHV4bHhzbSJ9.gbT5J_uXxbjRRuj00D7Xeg';
 
@@ -196,15 +221,10 @@ function createMap(){
      });
 
      map.addControl(directions, 'top-left');
-     // console.dir(direction);
      directions.on('route', function(direction){
-      console.log('working');
-      // console.log(directions.route["0"].distance / 1000 + "kms");
-      console.log(direction);
 
       traveldistance = (Math.ceil(direction.route["0"].distance / 1000))
 
-      console.log(traveldistance);
      });
 
     //Grabbing route from custom inputs
@@ -216,30 +236,32 @@ function createMap(){
        directions.setOrigin(getAA);
        directions.setDestination(getBB);
      }
+
+
  };
 
 
 $('#searchbutton').on('click', function(){
 
-  $('#sidebar-button').fadeIn();
+  $('#sidebar-button').fadeIn(3500);
 
 })
 
 
-vbuttonFunc('#motorhome-button')
-vbuttonFunc('#largecar-button')
-vbuttonFunc('#smallcar-button')
-vbuttonFunc('#motorbike-button')
-
-function vbuttonFunc(buttonname){
-
-$(buttonname).on('click', function(){
-
-  createMap()
-
-})
-
-}
+// vbuttonFunc('#motorhome-button')
+// vbuttonFunc('#largecar-button')
+// vbuttonFunc('#smallcar-button')
+// vbuttonFunc('#motorbike-button')
+//
+// function vbuttonFunc(buttonname){
+//
+// $(buttonname).on('click', function(){
+//
+//   createMap(5000)
+//
+// })
+//
+// }
 
 // -------------------
 //   ADDING VALUES
@@ -274,8 +296,6 @@ function hireCost(vehicleValue) {
 
   hirecostvalue = daysNeeded.value * vehicleValue
 
-  console.log(hirecostvalue);
-
 };
 
 $('#motorhome-button').on('click', function() {
@@ -302,8 +322,6 @@ var vehicleFuelcost
 function fuelValue(vfuelcost) {
 
   vehicleFuelcost = vfuelcost
-
-  console.log(vehicleFuelcost);
 
 }
 
@@ -332,10 +350,6 @@ function fuelCost(){
 
   rfuelcostvalue = Math.ceil(fuelcostvalue)
 
-  console.log(fuelcostvalue);
-
-  console.log(vehicleFuelcost);
-  console.log(traveldistance);
 }
 
 $('#sidebar-button').on('click', function(){
