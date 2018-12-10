@@ -63,7 +63,7 @@
       color: grey;
       background-color: #A3D1D8;
       text-align: center; }
-      #page2-div #ph-confirmbutton button p {
+      #page2-div #ph-confirmbutton button {
         color: white;
         font-size: 30px;
         padding-top: 3px; }
@@ -279,7 +279,7 @@
         color: grey;
         background-color: rgba(163, 209, 216, 0.92);
         text-align: center; }
-        #page4-div .sidebar #sidebar-button button p {
+        #page4-div .sidebar #sidebar-button button {
           color: white;
           font-size: 30px;
           padding-top: 3px; }
@@ -355,25 +355,25 @@
       #page5-div .main-container--c .button-wrappers .button-wrapper {
         text-align: center;
         width: 1500px; }
-        #page5-div .main-container--c .button-wrappers .button-wrapper button {
+        #page5-div .main-container--c .button-wrappers .button-wrapper a {
           border: #DDC137 3px solid;
           border-radius: 50px;
           height: 60px;
           width: 240px;
           color: grey;
           background-color: #055F63;
-          text-align: center; }
-          #page5-div .main-container--c .button-wrappers .button-wrapper button a {
-            text-decoration: none; }
-            #page5-div .main-container--c .button-wrappers .button-wrapper button a p {
-              color: white;
-              font-size: 30px;
-              padding-top: 3px; }
+          text-align: center; 
+            text-decoration: none; 
+            color: white;
+            font-size: 30px;
+            padding-top: 3px; }
         #page5-div .main-container--c .button-wrappers .button-wrapper button:hover {
           background-color: #DDC137; }
       #page5-div .main-container--c .button-wrappers .rbutton-wrapper {
         width: 200px; }
-        #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button {
+        
+        
+      #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button {
           border: #e74c3c 3px solid;
           border-radius: 50px;
           height: 60px;
@@ -381,12 +381,16 @@
           color: grey;
           background-color: #055F63;
           text-align: center; }
-          #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button a {
+          
+          
+        #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button a {
             text-decoration: none; }
-            #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button a p {
+            
+        #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button a p {
               color: white;
               font-size: 30px;
               padding-top: 3px; }
+        
         #page5-div .main-container--c .button-wrappers .rbutton-wrapper #restart-button:hover {
           background-color: #e74c3c; }
 
